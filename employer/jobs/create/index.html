@@ -1,292 +1,266 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Form pembuatan lowongan baru dengan rekomendasi upah berbasis spesifikasi tugas, risiko, keterampilan, jarak, dan durasi." />
-    <title>Buat Lowongan Baru | Mekard Employer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet" />
-    <link rel="stylesheet" href="../../../assets/dashboard.css" />
-  </head>
-  <body data-sidebar="normal">
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Navigasi pemberi kerja">
-        <div class="sidebar__header">
-          <a class="brand" href="../../dashboard/" aria-label="Mekard Employer">
-            <span class="brand__symbol" aria-hidden="true">m</span>
-            <span class="brand__word">mekard.</span>
-          </a>
-          <button class="sidebar__quick-toggle" type="button" data-sidebar-close aria-label="Perkecil sidebar">
-            <span class="material-symbols-rounded" aria-hidden="true">left_panel_close</span>
-          </button>
-        </div>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Form pembuatan lowongan baru dengan saran upah berdasarkan rincian tugas, risiko, keterampilan, jarak, dan durasi." name="description"/>
+<title>Buat Lowongan Baru | Mekard Pemberi Kerja</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet"/>
+<link href="../../../assets/dashboard.css" rel="stylesheet"/>
+</head>
+<body data-sidebar="normal">
+<div class="app-shell">
+<aside aria-label="Navigasi pemberi kerja" class="sidebar">
+<div class="sidebar__header">
+<a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="../../dashboard/"><img alt="" aria-hidden="true" class="brand__mark" height="197" src="../../../assets/mekard-mark.png" width="197"/><span class="brand__word">mekard.</span></a>
+<button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button">
+<span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span>
+</button>
+</div>
+<div class="sidebar__content">
+<p class="sidebar__label">Workspace</p>
+<nav class="sidebar__nav">
+<a class="nav-item" data-tooltip="Dashboard" href="../../dashboard/">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">space_dashboard</span>
+<span class="nav-item__text">Dashboard</span>
+</a>
+<a class="nav-item is-active" data-tooltip="Buat Lowongan" href="./">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">add_circle</span>
+<span class="nav-item__text">Buat Lowongan</span>
+</a>
+<a class="nav-item" data-tooltip="Lowongan Saya" href="../123/">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">work</span>
+<span class="nav-item__text">Lowongan Saya</span>
+<span class="nav-item__badge">4</span>
+</a>
+<a class="nav-item" data-tooltip="Pelamar" href="../123/#applicants">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">group</span>
+<span class="nav-item__text">Pelamar</span>
+<span class="nav-item__badge">28</span>
+</a>
+<a class="nav-item" data-tooltip="Pekerja Terpilih" href="../123/#applicants">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">person_check</span>
+<span class="nav-item__text">Pekerja Terpilih</span>
+</a>
 
-        <div class="sidebar__content">
-          <p class="sidebar__label">Workspace</p>
-          <nav class="sidebar__nav">
-            <a class="nav-item" href="../../dashboard/" data-tooltip="Dashboard">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">space_dashboard</span>
-              <span class="nav-item__text">Dashboard</span>
-            </a>
-            <a class="nav-item is-active" href="./" data-tooltip="Buat Lowongan">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">add_circle</span>
-              <span class="nav-item__text">Buat Lowongan</span>
-            </a>
-            <a class="nav-item" href="../123/" data-tooltip="Lowongan Saya">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">work</span>
-              <span class="nav-item__text">Lowongan Saya</span>
-              <span class="nav-item__badge">4</span>
-            </a>
-            <a class="nav-item" href="../123/#applicants" data-tooltip="Pelamar">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">group</span>
-              <span class="nav-item__text">Pelamar</span>
-              <span class="nav-item__badge">28</span>
-            </a>
-            <a class="nav-item" href="#" data-tooltip="Kontrak">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">description</span>
-              <span class="nav-item__text">Kontrak</span>
-            </a>
-            <a class="nav-item" href="#" data-tooltip="Pembayaran">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">account_balance_wallet</span>
-              <span class="nav-item__text">Pembayaran</span>
-            </a>
-          </nav>
-
-          <div class="sidebar__divider"></div>
-          <p class="sidebar__label">Pengaturan</p>
-          <nav class="sidebar__nav">
-            <a class="nav-item" href="#" data-tooltip="Profil Perusahaan">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">apartment</span>
-              <span class="nav-item__text">Profil Perusahaan</span>
-            </a>
-            <a class="nav-item" href="#" data-tooltip="Notifikasi">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">notifications</span>
-              <span class="nav-item__text">Notifikasi</span>
-            </a>
-            <a class="nav-item" href="#" data-tooltip="Bantuan">
-              <span class="nav-item__icon material-symbols-rounded" aria-hidden="true">help</span>
-              <span class="nav-item__text">Bantuan</span>
-            </a>
-          </nav>
-        </div>
-
-        <div class="sidebar__footer">
-          <a class="sidebar-profile" href="#profil">
-            <span class="avatar">NB</span>
-            <span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span>
-            <span class="material-symbols-rounded" aria-hidden="true">more_vert</span>
-          </a>
-        </div>
-      </aside>
-
-      <div class="mobile-overlay" data-mobile-overlay aria-hidden="true"></div>
-
-      <div class="main-shell">
-        <header class="topbar">
-          <div class="topbar__left">
-            <button class="icon-button sidebar-state-button" type="button" data-sidebar-cycle aria-label="Ganti tampilan sidebar" title="Ganti tampilan sidebar">
-              <span class="material-symbols-rounded" aria-hidden="true">dock_to_left</span>
-            </button>
-            <div class="page-heading">
-              <span class="page-heading__eyebrow">Lowongan / Baru</span>
-              <h1>Buat Lowongan Baru</h1>
-            </div>
-          </div>
-          <div class="topbar__right">
-            <button class="icon-button notification-dot" type="button" aria-label="Notifikasi" data-demo-action data-demo-title="Notifikasi" data-demo-message="Tidak ada validasi yang memerlukan tindakan.">
-              <span class="material-symbols-rounded" aria-hidden="true">notifications</span>
-            </button>
-            <button class="header-profile" type="button" aria-label="Buka profil">
-              <span class="avatar">NB</span>
-              <span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span>
-              <span class="material-symbols-rounded" aria-hidden="true">expand_more</span>
-            </button>
-          </div>
-        </header>
-
-        <main class="app-content" id="main-content">
-          <section class="content-header" aria-labelledby="create-title">
-            <div class="content-header__copy">
-              <p class="kicker">Publikasikan kebutuhan pekerja</p>
-              <h2 id="create-title">Jelaskan tugasnya, Mekard menghitung upah wajarnya.</h2>
-              <p>Isi spesifikasi pekerjaan dengan jelas. Rekomendasi upah akan diperbarui otomatis berdasarkan durasi, risiko, keterampilan, jadwal, dan jarak.</p>
-            </div>
-            <div class="content-header__actions">
-              <a class="button button--outline" href="../../dashboard/">
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_back</span>
+</nav>
+<div class="sidebar__divider"></div>
+<p class="sidebar__label">Pengaturan</p>
+<nav class="sidebar__nav">
+<a class="nav-item" data-tooltip="Profil Perusahaan" href="#">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">apartment</span>
+<span class="nav-item__text">Profil Perusahaan</span>
+</a>
+<a class="nav-item" data-tooltip="Notifikasi" href="#">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">notifications</span>
+<span class="nav-item__text">Notifikasi</span>
+</a>
+<a class="nav-item" data-tooltip="Bantuan" href="#">
+<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">help</span>
+<span class="nav-item__text">Bantuan</span>
+</a>
+</nav>
+</div>
+<div class="sidebar__footer">
+<a class="sidebar-profile" href="#profil">
+<span class="avatar">NB</span>
+<span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span>
+<span aria-hidden="true" class="material-symbols-rounded">more_vert</span>
+</a>
+</div>
+</aside>
+<div aria-hidden="true" class="mobile-overlay" data-mobile-overlay=""></div>
+<div class="main-shell">
+<header class="topbar">
+<div class="topbar__left">
+<button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar" type="button">
+<span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span>
+</button>
+<div class="page-heading">
+<span class="page-heading__eyebrow">Lowongan / Baru</span>
+<h1>Buat Lowongan Baru</h1>
+</div>
+</div>
+<div class="topbar__right">
+<button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="Tidak ada validasi yang memerlukan tindakan." data-demo-title="Notifikasi" type="button">
+<span aria-hidden="true" class="material-symbols-rounded">notifications</span>
+</button>
+<button aria-label="Buka profil" class="header-profile" type="button">
+<span class="avatar">NB</span>
+<span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span>
+<span aria-hidden="true" class="material-symbols-rounded">expand_more</span>
+</button>
+</div>
+</header>
+<main class="app-content" id="main-content">
+<section aria-labelledby="create-title" class="content-header">
+<div class="content-header__copy">
+<p class="kicker">Publikasikan kebutuhan pekerja</p>
+<h2 id="create-title">Jelaskan tugasnya, Mekard menghitung upah wajarnya.</h2>
+<p>Ceritakan pekerjaannya dengan jelas. Saran upah akan menyesuaikan durasi, risiko, keterampilan, jadwal, dan jarak.</p>
+</div>
+<div class="content-header__actions">
+<a class="button button--outline" href="../../dashboard/">
+<span aria-hidden="true" class="material-symbols-rounded">arrow_back</span>
                 Kembali
               </a>
-              <button class="button button--dark" type="button" data-save-draft data-demo-action data-demo-title="Draft tersimpan" data-demo-message="Form lowongan disimpan sebagai draft.">
-                <span class="material-symbols-rounded" aria-hidden="true">save</span>
+<button class="button button--dark" data-demo-action="" data-demo-message="Form lowongan disimpan sebagai draft." data-demo-title="Draft tersimpan" data-save-draft="" type="button">
+<span aria-hidden="true" class="material-symbols-rounded">save</span>
                 Simpan Draft
               </button>
-            </div>
-          </section>
-
-          <div class="card stepper" aria-label="Tahapan pembuatan lowongan">
-            <div class="stepper__item is-active"><span class="stepper__number">1</span><span>Detail Tugas</span></div>
-            <div class="stepper__item is-active"><span class="stepper__number">2</span><span>Lokasi & Jadwal</span></div>
-            <div class="stepper__item is-active"><span class="stepper__number">3</span><span>Upah & Kuota</span></div>
-            <div class="stepper__item"><span class="stepper__number">4</span><span>Tinjau</span></div>
-          </div>
-
-          <form class="form-page-grid" data-job-form>
-            <div class="card">
-              <section class="form-section" aria-labelledby="task-section-title">
-                <header class="form-section__header">
-                  <span class="form-section__icon material-symbols-rounded" aria-hidden="true">assignment</span>
-                  <div><h3 id="task-section-title">Detail Tugas</h3><p>Informasi utama yang akan dilihat oleh calon pekerja.</p></div>
-                </header>
-                <div class="form-grid">
-                  <div class="field field--full">
-                    <label for="job-title">Judul lowongan <small>(wajib)</small></label>
-                    <input class="input" id="job-title" name="title" type="text" value="Angkut Material Bangunan" placeholder="Contoh: Bersih-bersih rumah harian" required />
-                  </div>
-                  <div class="field">
-                    <label for="category">Kategori pekerjaan</label>
-                    <select class="select" id="category" name="category">
-                      <option>Angkut & Pindahan</option>
-                      <option>Konstruksi & Bangunan</option>
-                      <option>Kebersihan</option>
-                      <option>Perbaikan Rumah</option>
-                      <option>Perawatan Taman</option>
-                    </select>
-                  </div>
-                  <div class="field">
-                    <label for="skill-level">Tingkat keterampilan</label>
-                    <select class="select" id="skill-level" name="skill_level">
-                      <option value="basic">Dasar</option>
-                      <option value="skilled" selected>Terampil</option>
-                      <option value="expert">Ahli / tersertifikasi</option>
-                    </select>
-                  </div>
-                  <div class="field field--full">
-                    <label for="job-description">Deskripsi pekerjaan</label>
-                    <textarea class="textarea" id="job-description" name="description" maxlength="500" data-char-count="#description-count">Memindahkan semen, pasir, bata, dan material ringan dari area bongkar menuju tempat penyimpanan proyek. Pekerja harus mengikuti arahan mandor dan menggunakan alat pelindung yang disediakan.</textarea>
-                    <div class="char-count" id="description-count">0/500</div>
-                  </div>
-                  <div class="field field--full">
-                    <span class="field__label">Peralatan atau kondisi khusus</span>
-                    <div class="check-grid">
-                      <label class="check-card"><input type="checkbox" checked /><span>Aktivitas fisik berat</span></label>
-                      <label class="check-card"><input type="checkbox" checked /><span>APD disediakan employer</span></label>
-                      <label class="check-card"><input type="checkbox" /><span>Butuh sertifikat khusus</span></label>
-                      <label class="check-card"><input type="checkbox" checked /><span>Area kerja outdoor</span></label>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="form-section" aria-labelledby="schedule-section-title">
-                <header class="form-section__header">
-                  <span class="form-section__icon material-symbols-rounded" aria-hidden="true">location_on</span>
-                  <div><h3 id="schedule-section-title">Lokasi & Jadwal</h3><p>Digunakan untuk kalkulasi jarak dan kompensasi perjalanan.</p></div>
-                </header>
-                <div class="form-grid">
-                  <div class="field field--full">
-                    <label for="address">Alamat lokasi kerja</label>
-                    <input class="input" id="address" name="address" type="text" value="Jl. Mahendradata No. 18, Denpasar Barat, Bali" />
-                    <div class="field__help">Pada implementasi produksi, bidang ini dapat terhubung ke peta dan geocoding.</div>
-                  </div>
-                  <div class="field">
-                    <label for="job-date">Tanggal mulai</label>
-                    <input class="input" id="job-date" name="date" type="date" value="2026-07-22" />
-                  </div>
-                  <div class="field">
-                    <label for="start-time">Jam mulai</label>
-                    <input class="input" id="start-time" name="start_time" type="time" value="08:00" />
-                  </div>
-                  <div class="field">
-                    <label for="duration">Estimasi durasi</label>
-                    <div class="input-group"><input class="input has-suffix" id="duration" name="duration" type="number" min="1" max="24" value="5" /><span class="input-group__suffix">jam</span></div>
-                  </div>
-                  <div class="field">
-                    <label for="distance">Rata-rata jarak pekerja</label>
-                    <div class="input-group"><input class="input has-suffix" id="distance" name="distance" type="number" min="0" max="100" step="0.5" value="6.5" /><span class="input-group__suffix">km</span></div>
-                  </div>
-                  <div class="field field--full">
-                    <span class="field__label">Tipe jadwal</span>
-                    <div class="segmented">
-                      <label><input type="radio" name="schedule_type" value="normal" checked /><span>Normal</span></label>
-                      <label><input type="radio" name="schedule_type" value="urgent" /><span>Mendesak</span></label>
-                      <label><input type="radio" name="schedule_type" value="night" /><span>Shift malam</span></label>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section class="form-section" aria-labelledby="wage-section-title">
-                <header class="form-section__header">
-                  <span class="form-section__icon material-symbols-rounded" aria-hidden="true">payments</span>
-                  <div><h3 id="wage-section-title">Upah, Risiko & Kuota</h3><p>Mesin rekomendasi menggunakan input ini untuk menghitung kisaran upah.</p></div>
-                </header>
-                <div class="form-grid">
-                  <div class="field">
-                    <label for="workers">Jumlah pekerja dibutuhkan</label>
-                    <div class="input-group"><input class="input has-suffix" id="workers" name="workers" type="number" min="1" max="100" value="8" /><span class="input-group__suffix">orang</span></div>
-                  </div>
-                  <div class="field">
-                    <label for="risk-level">Tingkat risiko kerja</label>
-                    <select class="select" id="risk-level" name="risk_level">
-                      <option value="low">Rendah</option>
-                      <option value="medium" selected>Sedang</option>
-                      <option value="high">Tinggi</option>
-                    </select>
-                  </div>
-                  <div class="field">
-                    <label for="custom-wage">Upah pilihan employer <small>(opsional)</small></label>
-                    <div class="input-group"><span class="input-group__prefix">Rp</span><input class="input has-prefix" id="custom-wage" name="custom_wage" type="number" min="0" step="5000" placeholder="Gunakan rekomendasi" /></div>
-                    <div class="field__help">Kosongkan untuk menggunakan angka rekomendasi sistem.</div>
-                  </div>
-                  <div class="field">
-                    <label for="payment-method">Metode pembayaran</label>
-                    <select class="select" id="payment-method" name="payment_method">
-                      <option>Saldo Mekard</option>
-                      <option>Transfer bank terverifikasi</option>
-                      <option>Pembayaran setelah pekerjaan</option>
-                    </select>
-                  </div>
-                  <input type="hidden" name="recommended_wage" />
-                </div>
-              </section>
-
-              <footer class="form-footer">
-                <span class="save-status"><span class="material-symbols-rounded" aria-hidden="true">cloud_done</span> Perubahan tersimpan otomatis</span>
-                <div class="inline-actions">
-                  <button class="button button--ghost" type="button" data-save-draft>Simpan Draft</button>
-                  <button class="button button--outline" type="button" data-demo-action data-demo-title="Pratinjau dibuat" data-demo-message="Lowongan tampil seperti yang akan dilihat pekerja.">Pratinjau</button>
-                  <button class="button button--primary" type="submit"><span class="material-symbols-rounded" aria-hidden="true">publish</span> Publikasikan Lowongan</button>
-                </div>
-              </footer>
-            </div>
-
-            <aside class="card estimator" aria-labelledby="estimator-title">
-              <div class="estimator__hero">
-                <p class="kicker">Rekomendasi mesin ML</p>
-                <h3 id="estimator-title">Estimasi upah wajar</h3>
-                <strong class="estimator__value" data-estimate-recommended>Rp 0 <small>/ pekerja</small></strong>
-                <span class="estimator__range" data-estimate-range>Rentang wajar sedang dihitung...</span>
-              </div>
-              <div class="estimator__body">
-                <div class="estimator-row"><span>Durasi dasar</span><strong data-estimate-duration>—</strong></div>
-                <div class="estimator-row"><span>Tingkat keterampilan</span><strong data-estimate-skill>—</strong></div>
-                <div class="estimator-row"><span>Penyesuaian risiko</span><strong data-estimate-risk>—</strong></div>
-                <div class="estimator-row"><span>Kompensasi jarak</span><strong data-estimate-distance>—</strong></div>
-                <div class="estimator-total">
-                  <div><span>Estimasi total anggaran</span><strong data-estimate-total>Rp 0</strong></div>
-                  <span class="material-symbols-rounded text-orange" aria-hidden="true">calculate</span>
-                </div>
-                <p class="estimator-note"><span class="material-symbols-rounded" aria-hidden="true">info</span><span>Angka ini adalah prototipe kalkulasi frontend. Pada produksi, nilai dapat berasal dari model ML dan data historis wilayah.</span></p>
-              </div>
-            </aside>
-          </form>
-        </main>
-      </div>
-    </div>
-
-    <div class="toast-region" data-toast-region aria-live="polite"></div>
-    <script src="../../../assets/dashboard.js"></script>
-  </body>
+</div>
+</section>
+<div aria-label="Tahapan pembuatan lowongan" class="card stepper">
+<div class="stepper__item is-active"><span class="stepper__number">1</span><span>Detail Tugas</span></div>
+<div class="stepper__item is-active"><span class="stepper__number">2</span><span>Lokasi &amp; Jadwal</span></div>
+<div class="stepper__item is-active"><span class="stepper__number">3</span><span>Upah &amp; Pekerja</span></div>
+<div class="stepper__item"><span class="stepper__number">4</span><span>Tinjau</span></div>
+</div>
+<form class="form-page-grid" data-job-form="">
+<div class="card">
+<section aria-labelledby="task-section-title" class="form-section">
+<header class="form-section__header">
+<span aria-hidden="true" class="form-section__icon material-symbols-rounded">assignment</span>
+<div><h3 id="task-section-title">Detail Tugas</h3><p>Informasi utama yang akan dilihat oleh calon pekerja.</p></div>
+</header>
+<div class="form-grid">
+<div class="field field--full">
+<label for="job-title">Judul lowongan <small>(wajib)</small></label>
+<input class="input" id="job-title" name="title" placeholder="Contoh: Bersih-bersih rumah harian" required="" type="text" value="Angkut Material Bangunan"/>
+</div>
+<div class="field">
+<label for="category">Kategori pekerjaan</label>
+<select class="select" id="category" name="category">
+<option>Angkut &amp; Pindahan</option>
+<option>Konstruksi &amp; Bangunan</option>
+<option>Kebersihan</option>
+<option>Perbaikan Rumah</option>
+<option>Perawatan Taman</option>
+</select>
+</div>
+<div class="field">
+<label for="skill-level">Tingkat keterampilan</label>
+<select class="select" id="skill-level" name="skill_level">
+<option value="basic">Dasar</option>
+<option selected="" value="skilled">Terampil</option>
+<option value="expert">Ahli / tersertifikasi</option>
+</select>
+</div>
+<div class="field field--full">
+<label for="job-description">Deskripsi pekerjaan</label>
+<textarea class="textarea" data-char-count="#description-count" id="job-description" maxlength="500" name="description">Memindahkan semen, pasir, bata, dan material ringan dari area bongkar menuju tempat penyimpanan proyek. Pekerja harus mengikuti arahan mandor dan menggunakan alat pelindung yang disediakan.</textarea>
+<div class="char-count" id="description-count">0/500</div>
+</div>
+<div class="field field--full">
+<span class="field__label">Peralatan atau kondisi khusus</span>
+<div class="check-grid">
+<label class="check-card"><input checked="" type="checkbox"/><span>Aktivitas fisik berat</span></label>
+<label class="check-card"><input checked="" type="checkbox"/><span>APD disediakan pemberi kerja</span></label>
+<label class="check-card"><input type="checkbox"/><span>Butuh sertifikat khusus</span></label>
+<label class="check-card"><input checked="" type="checkbox"/><span>Area kerja outdoor</span></label>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="schedule-section-title" class="form-section">
+<header class="form-section__header">
+<span aria-hidden="true" class="form-section__icon material-symbols-rounded">location_on</span>
+<div><h3 id="schedule-section-title">Lokasi &amp; Jadwal</h3><p>Dipakai untuk menghitung jarak dan tambahan biaya perjalanan.</p></div>
+</header>
+<div class="form-grid">
+<div class="field field--full">
+<label for="address">Alamat lokasi kerja</label>
+<input class="input" id="address" name="address" type="text" value="Jl. Mahendradata No. 18, Denpasar Barat, Bali"/>
+<div class="field__help">Pada implementasi produksi, bidang ini dapat terhubung ke peta dan geocoding.</div>
+</div>
+<div class="field">
+<label for="job-date">Tanggal mulai</label>
+<input class="input" id="job-date" name="date" type="date" value="2026-07-22"/>
+</div>
+<div class="field">
+<label for="start-time">Jam mulai</label>
+<input class="input" id="start-time" name="start_time" type="time" value="08:00"/>
+</div>
+<div class="field">
+<label for="duration">Estimasi durasi</label>
+<div class="input-group"><input class="input has-suffix" id="duration" max="24" min="1" name="duration" type="number" value="5"/><span class="input-group__suffix">jam</span></div>
+</div>
+<div class="field">
+<label for="distance">Rata-rata jarak pekerja</label>
+<div class="input-group"><input class="input has-suffix" id="distance" max="100" min="0" name="distance" step="0.5" type="number" value="6.5"/><span class="input-group__suffix">km</span></div>
+</div>
+<div class="field field--full">
+<span class="field__label">Tipe jadwal</span>
+<div class="segmented">
+<label><input checked="" name="schedule_type" type="radio" value="normal"/><span>Normal</span></label>
+<label><input name="schedule_type" type="radio" value="urgent"/><span>Mendesak</span></label>
+<label><input name="schedule_type" type="radio" value="night"/><span>Shift malam</span></label>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="wage-section-title" class="form-section">
+<header class="form-section__header">
+<span aria-hidden="true" class="form-section__icon material-symbols-rounded">payments</span>
+<div><h3 id="wage-section-title">Upah, Risiko &amp; Kebutuhan Pekerja</h3><p>Mekard memakai rincian ini untuk memberi saran kisaran upah.</p></div>
+</header>
+<div class="form-grid">
+<div class="field">
+<label for="workers">Berapa pekerja yang dibutuhkan?</label>
+<div class="input-group"><input class="input has-suffix" id="workers" max="100" min="1" name="workers" type="number" value="8"/><span class="input-group__suffix">orang</span></div>
+</div>
+<div class="field">
+<label for="risk-level">Tingkat risiko kerja</label>
+<select class="select" id="risk-level" name="risk_level">
+<option value="low">Rendah</option>
+<option selected="" value="medium">Sedang</option>
+<option value="high">Tinggi</option>
+</select>
+</div>
+<div class="field field--full">
+<label for="custom-wage">Upah yang ingin ditawarkan <small>(opsional)</small></label>
+<div class="input-group"><span class="input-group__prefix">Rp</span><input class="input has-prefix" id="custom-wage" min="0" name="custom_wage" placeholder="Gunakan saran Mekard" step="5000" type="number"/></div>
+<div class="field__help">Kosongkan untuk memakai saran upah dari Mekard.</div>
+</div>
+<div class="field field--full"><div class="system-note"><span aria-hidden="true" class="material-symbols-rounded">handshake</span><span>Mekard membantu memberi saran upah. Cara dan waktu pembayaran dibicarakan langsung dengan pekerja di luar Mekard.</span></div></div>
+<input name="recommended_wage" type="hidden"/>
+</div>
+</section>
+<footer class="form-footer">
+<span class="save-status"><span aria-hidden="true" class="material-symbols-rounded">cloud_done</span> Perubahan tersimpan otomatis</span>
+<div class="inline-actions">
+<button class="button button--ghost" data-save-draft="" type="button">Simpan Draft</button>
+<button class="button button--outline" data-demo-action="" data-demo-message="Lowongan tampil seperti yang akan dilihat pekerja." data-demo-title="Pratinjau dibuat" type="button">Pratinjau</button>
+<button class="button button--primary" type="submit"><span aria-hidden="true" class="material-symbols-rounded">publish</span> Publikasikan Lowongan</button>
+</div>
+</footer>
+</div>
+<aside aria-labelledby="estimator-title" class="card estimator">
+<div class="estimator__hero">
+<p class="kicker">Saran upah dari Mekard</p>
+<h3 id="estimator-title">Estimasi upah wajar</h3>
+<strong class="estimator__value" data-estimate-recommended="">Rp 0 <small>/ pekerja</small></strong>
+<span class="estimator__range" data-estimate-range="">Rentang wajar sedang dihitung...</span>
+</div>
+<div class="estimator__body">
+<div class="estimator-row"><span>Durasi dasar</span><strong data-estimate-duration="">—</strong></div>
+<div class="estimator-row"><span>Tingkat keterampilan</span><strong data-estimate-skill="">—</strong></div>
+<div class="estimator-row"><span>Penyesuaian risiko</span><strong data-estimate-risk="">—</strong></div>
+<div class="estimator-row"><span>Kompensasi jarak</span><strong data-estimate-distance="">—</strong></div>
+<div class="estimator-total">
+<div><span>Estimasi total anggaran</span><strong data-estimate-total="">Rp 0</strong></div>
+<span aria-hidden="true" class="material-symbols-rounded text-orange">calculate</span>
+</div>
+<p class="estimator-note"><span aria-hidden="true" class="material-symbols-rounded">info</span><span>Saran upah dapat berubah mengikuti lokasi dan rincian pekerjaan yang diisi.</span></p>
+</div>
+</aside>
+</form>
+</main>
+</div>
+</div>
+<div aria-live="polite" class="toast-region" data-toast-region=""></div>
+<script src="../../../assets/dashboard.js"></script>
+</body>
 </html>

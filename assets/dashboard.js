@@ -296,9 +296,9 @@
     if (!selectedApplicantCard) return;
     const name = selectedApplicantCard.dataset.name || "Pelamar";
     selectedApplicantCard.dataset.status = "hired";
-    selectedApplicantCard.querySelector("[data-applicant-status-label]")?.replaceChildren("Direkrut");
+    selectedApplicantCard.querySelector("[data-applicant-status-label]")?.replaceChildren("Terpilih");
     selectedApplicantCard.querySelector("[data-hire-applicant]")?.setAttribute("disabled", "disabled");
-    selectedApplicantCard.querySelector("[data-hire-applicant]")?.replaceChildren("Direkrut");
+    selectedApplicantCard.querySelector("[data-hire-applicant]")?.replaceChildren("Terpilih");
 
     const quotaValues = [...document.querySelectorAll("[data-quota-value]")];
     const quotaRing = document.querySelector("[data-quota-ring]");
@@ -317,7 +317,7 @@
 
     closeModal();
     filterApplicants();
-    showToast("Rekrutmen dikonfirmasi", `${name} ditambahkan ke kuota pekerja.`);
+    showToast("Pekerja dipilih", `${name} ditambahkan ke daftar pekerja terpilih.`);
   });
 
   // Generic prototype actions

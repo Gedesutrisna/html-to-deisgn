@@ -3626,3 +3626,51 @@ body {
     display: none;
   }
 }
+
+
+/* Official Mekard identity */
+.brand__mark {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: block;
+  object-fit: contain;
+}
+
+.system-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  color: var(--muted);
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: 7px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.system-note .material-symbols-rounded {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: var(--orange);
+  font-size: 19px;
+}
+
+.system-note--compact {
+  margin-top: 18px;
+}
+
+body[data-sidebar="compact"] .brand__mark {
+  width: 32px;
+  height: 32px;
+  flex-basis: 32px;
+}
+
+@media (max-width: 920px) {
+  .brand__mark {
+    width: 32px;
+    height: 32px;
+    flex-basis: 32px;
+  }
+}

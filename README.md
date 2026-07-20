@@ -1,10 +1,10 @@
-# Mekard Employer Dashboard
+# Mekard Dashboard Pemberi Kerja
 
 Prototype frontend responsif untuk tiga route:
 
-- `/employer/dashboard` — dashboard utama employer
+- `/employer/dashboard` — dashboard utama pemberi kerja
 - `/employer/jobs/create` — form lowongan + rekomendasi upah interaktif
-- `/employer/jobs/[id]` — evaluasi pelamar, upah berbasis jarak, dan konfirmasi rekrutmen
+- `/employer/jobs/[id]` — daftar pelamar, saran upah berbasis jarak, dan pemilihan pekerja
 
 ## Menjalankan lokal
 
@@ -30,12 +30,12 @@ Lalu buka `http://localhost:8080`.
 - Sidebar mobile memakai drawer dan overlay.
 - Kalkulator rekomendasi upah frontend berdasarkan durasi, keterampilan, risiko, tipe jadwal, jarak, dan jumlah pekerja.
 - Filter nama, status, dan jarak pelamar.
-- Modal konfirmasi rekrutmen dan pembaruan kuota.
+- Modal pemilihan pekerja dan pembaruan kebutuhan pekerja.
 - Tabs detail lowongan dan notifikasi toast.
 
 ## Integrasi produksi
 
-Data di dalam prototype masih statis. Hubungkan form, daftar pelamar, kalkulasi upah, autentikasi, peta, dan kontrak ke API/backend proyek. Struktur CSS dan JavaScript sengaja dibuat tanpa framework agar mudah dipindahkan ke Laravel Blade, React, Vue, atau stack lain.
+Data di dalam prototype masih statis. Hubungkan form, daftar pelamar, perhitungan upah, autentikasi, peta, dan status pekerja terpilih ke API/backend proyek. Struktur CSS dan JavaScript sengaja dibuat tanpa framework agar mudah dipindahkan ke Laravel Blade, React, Vue, atau stack lain.
 
 ## Responsive refinement
 
@@ -47,3 +47,11 @@ The final responsive pass adds laptop-focused breakpoints for 1280–1540px layo
 - create-job estimator becomes full width at 1280px;
 - sticky form footer is disabled on short laptop screens;
 - tablet/mobile applicant cards use an intentional two-row layout.
+
+
+## Catatan alur produk
+
+- Mekard tidak menangani pembayaran atau menyimpan saldo pemberi kerja.
+- Cara dan waktu pembayaran dibicarakan langsung antara pemberi kerja dan pekerja di luar platform.
+- Istilah legal seperti “kontrak” diganti dengan bahasa yang lebih ringan seperti “pekerja terpilih” dan “pilih pekerja”.
+- Logo resmi Mekard tersedia di `assets/mekard-mark.png`; elemen dekoratif resmi tersedia di `assets/logo-decoration.png`.
