@@ -1,376 +1,80 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="id">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Halaman pemberi kerja untuk mengelola lowongan, memilih pekerja, dan melihat upah per pekerja yang transparan." name="description"/>
+<meta content="Halaman pemberi kerja untuk mengelola pelamar, riwayat pekerjaan, nota kesepakatan, dan penyelesaian kerja." name="description"/>
 <title>Pilih Pekerja &amp; Kelola Lowongan | Mekard Pemberi Kerja</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet"/>
 <link href="../../../assets/dashboard.css" rel="stylesheet"/>
 </head>
-<body data-sidebar="normal">
+<body>
+<div class="mekard-dashboard" data-sidebar="normal">
 <div class="app-shell">
 <aside aria-label="Navigasi pemberi kerja" class="sidebar">
 <div class="sidebar__header">
-<a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="../../dashboard/"><span aria-hidden="true" class="brand__symbol">m</span><span class="brand__word">mekard.</span></a>
-<button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span>
-</button>
+<a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="../../"><span aria-hidden="true" class="brand__symbol">m</span><span class="brand__word">mekard.</span></a>
+<button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button"><span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span></button>
 </div>
 <div class="sidebar__content">
 <p class="sidebar__label">Workspace</p>
-<nav class="sidebar__nav">
-<a class="nav-item" data-tooltip="Dashboard" href="../../dashboard/">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">space_dashboard</span>
-<span class="nav-item__text">Dashboard</span>
-</a>
-<a class="nav-item" data-tooltip="Buat Lowongan" href="../create/">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">add_circle</span>
-<span class="nav-item__text">Buat Lowongan</span>
-</a>
-<a class="nav-item is-active" data-tooltip="Lowongan Saya" href="./">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">work</span>
-<span class="nav-item__text">Lowongan Saya</span>
-<span class="nav-item__badge">4</span>
-</a>
-<a class="nav-item" data-tooltip="Pelamar" href="#applicants">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">group</span>
-<span class="nav-item__text">Pelamar</span>
-<span class="nav-item__badge">28</span>
-</a>
-<a class="nav-item" data-tooltip="Pekerja Terpilih" href="#applicants">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">person_check</span>
-<span class="nav-item__text">Pekerja Terpilih</span>
-</a>
-</nav>
+<nav class="sidebar__nav"><a class="nav-item" data-tooltip="Dashboard" href="../../">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">space_dashboard</span><span class="nav-item__text">Dashboard</span>
+</a><a class="nav-item" data-tooltip="Buat Lowongan" href="../create/">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">add_circle</span><span class="nav-item__text">Buat Lowongan</span>
+</a><a class="nav-item is-active" data-tooltip="Lowongan Saya" href="../">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">work</span><span class="nav-item__text">Lowongan Saya</span><span class="nav-item__badge">4</span>
+</a><a class="nav-item" data-tooltip="Pelamar" href="./#applicants">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">group</span><span class="nav-item__text">Pelamar</span><span class="nav-item__badge">28</span>
+</a><a class="nav-item" data-tooltip="Pekerja Terpilih" href="./#work">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">person_check</span><span class="nav-item__text">Pekerja Terpilih</span>
+</a></nav>
 <div class="sidebar__divider"></div>
 <p class="sidebar__label">Pengaturan</p>
 <nav class="sidebar__nav">
-<a class="nav-item" data-tooltip="Profil Perusahaan" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">apartment</span>
-<span class="nav-item__text">Profil Perusahaan</span>
-</a>
-<a class="nav-item" data-tooltip="Notifikasi" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">notifications</span>
-<span class="nav-item__text">Notifikasi</span>
-</a>
-<a class="nav-item" data-tooltip="Bantuan" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">help</span>
-<span class="nav-item__text">Bantuan</span>
-</a>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Profil Perusahaan" data-tooltip="Profil Perusahaan" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">apartment</span><span class="nav-item__text">Profil Perusahaan</span></button>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Notifikasi" data-tooltip="Notifikasi" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">notifications</span><span class="nav-item__text">Notifikasi</span></button>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Bantuan" data-tooltip="Bantuan" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">help</span><span class="nav-item__text">Bantuan</span></button>
 </nav>
 </div>
 <div class="sidebar__footer">
-<a class="sidebar-profile" href="#profil">
-<span class="avatar">NB</span>
-<span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">more_vert</span>
-</a>
+<button class="sidebar-profile" data-demo-action="" data-demo-message="Nusa Build adalah akun pemberi kerja terverifikasi." data-demo-title="Profil perusahaan" id="profile" type="button">
+<span class="avatar">NB</span><span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span><span aria-hidden="true" class="material-symbols-rounded">more_vert</span>
+</button>
 </div>
 </aside>
-<div aria-hidden="true" class="mobile-overlay" data-mobile-overlay=""></div>
+<button aria-label="Tutup navigasi" class="mobile-overlay" data-mobile-overlay="" type="button"></button>
 <div class="main-shell">
 <header class="topbar">
 <div class="topbar__left">
-<button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span>
-</button>
-<div class="page-heading">
-<span class="page-heading__eyebrow">Lowongan / MK-1048</span>
-<h1>Pilih Pekerja &amp; Kelola Lowongan</h1>
+<button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar (Alt+S)" type="button"><span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span></button>
+<div class="page-heading"><span class="page-heading__eyebrow">Lowongan / MK-1048</span><h1>Pilih Pekerja &amp; Kelola Lowongan</h1></div>
 </div>
-</div>
-<div class="topbar__right">
-<label class="topbar-search">
-<span aria-hidden="true" class="material-symbols-rounded">search</span>
-<span class="sr-only">Cari pelamar</span>
-<input data-applicant-search="" placeholder="Cari pelamar..." type="search"/>
+<div class="topbar__right"><label class="topbar-search">
+<span aria-hidden="true" class="material-symbols-rounded">search</span><span class="sr-only">Cari pelamar atau pekerja...</span>
+<input placeholder="Cari pelamar atau pekerja..." type="search" data-detail-search=""/>
 </label>
-<button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="12 pelamar baru untuk lowongan ini." data-demo-title="Notifikasi" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">notifications</span>
-</button>
-<button aria-label="Buka profil" class="header-profile" type="button">
-<span class="avatar">NB</span>
-<span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">expand_more</span>
-</button>
+<button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="Ada pekerjaan yang menunggu konfirmasi selesai." data-demo-title="Notifikasi" type="button"><span aria-hidden="true" class="material-symbols-rounded">notifications</span></button>
+<button aria-label="Buka profil" class="header-profile" data-demo-action="" data-demo-message="Menu profil siap dihubungkan ke autentikasi produksi." data-demo-title="Profil" type="button"><span class="avatar">NB</span><span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span><span aria-hidden="true" class="material-symbols-rounded">expand_more</span></button>
 </div>
 </header>
 <main class="app-content" id="main-content">
-<section aria-labelledby="job-title" class="card job-hero">
-<div class="job-hero__top">
-<div>
-<div class="job-hero__title-row">
-<h2 id="job-title">Angkut Material Bangunan</h2>
-<span class="status status--active">Aktif</span>
-</div>
-<div class="job-hero__meta">
-<span><span aria-hidden="true" class="material-symbols-rounded">location_on</span> Denpasar Barat, Bali</span>
-<span><span aria-hidden="true" class="material-symbols-rounded">calendar_month</span> 22 Juli 2026, 08:00 WITA</span>
-<span><span aria-hidden="true" class="material-symbols-rounded">tag</span> MK-1048</span>
-</div>
-</div>
-<div class="content-header__actions">
-<button class="button button--outline" data-demo-action="" data-demo-message="Tautan lowongan siap dibagikan." data-demo-title="Tautan disalin" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">share</span> Bagikan
-                </button>
-<a class="button button--dark" href="../create/">
-<span aria-hidden="true" class="material-symbols-rounded">edit</span> Edit
-                </a>
-<button class="button button--danger" data-demo-action="" data-demo-message="Lowongan tidak menerima pelamar baru sementara waktu." data-demo-title="Lowongan dijeda" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">pause</span> Jeda
-                </button>
-</div>
-</div>
-<div class="job-hero__stats">
-<div class="job-hero__stat"><strong>12</strong><span>Pelamar baru</span></div>
-<div class="job-hero__stat"><strong data-current="5" data-quota-value="" data-total="8">5/8</strong><span>Kebutuhan terisi</span></div>
-<div class="job-hero__stat"><strong data-job-wage="">Rp 170.000</strong><span>Upah per pekerja</span></div>
-<div class="job-hero__stat"><strong>2 hari</strong><span>Waktu menuju mulai</span></div>
-</div>
-</section>
-<nav aria-label="Navigasi detail lowongan" class="card tabs" data-tabs="job-detail">
-<button aria-selected="true" class="tab-button is-active" data-tab-target="applicants-panel" role="tab" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">group</span> Pelamar <span class="status status--info">12</span>
-</button>
-<button aria-selected="false" class="tab-button" data-tab-target="detail-panel" role="tab" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">assignment</span> Detail Lowongan
-            </button>
-<button aria-selected="false" class="tab-button" data-tab-target="activity-panel" role="tab" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">history</span> Aktivitas
-            </button>
-</nav>
-<section aria-labelledby="applicants" class="tab-panel is-active" data-tab-group="job-detail" id="applicants-panel">
-<div class="applicants-layout">
-<div>
-<div class="card filter-bar">
-<label class="filter-input">
-<span aria-hidden="true" class="material-symbols-rounded">search</span>
-<span class="sr-only">Cari nama pelamar</span>
-<input class="input" data-applicant-search="" placeholder="Cari nama pelamar..." type="search"/>
-</label>
-<label>
-<span class="sr-only">Filter status</span>
-<select class="select" data-applicant-status="">
-<option value="all">Semua status</option>
-<option value="new">Baru</option>
-<option value="shortlisted">Dipertimbangkan</option>
-<option value="hired">Terpilih</option>
-</select>
-</label>
-<label>
-<span class="sr-only">Filter jarak</span>
-<select class="select" data-applicant-distance="">
-<option value="999">Semua jarak</option>
-<option value="3">Maks. 3 km</option>
-<option value="5">Maks. 5 km</option>
-<option value="10">Maks. 10 km</option>
-</select>
-</label>
-<button class="button button--outline" data-reset-filter="" type="button">Reset</button>
-</div>
-<div class="inline-actions" style="justify-content: space-between; margin: 0 2px 12px">
-<span class="muted" data-applicant-result="" style="font-size: 11px">5 pelamar ditampilkan</span>
-<button class="button button--ghost button--small" data-demo-action="" data-demo-message="Pelamar diurutkan berdasarkan skor kecocokan." data-demo-title="Urutan diperbarui" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">swap_vert</span> Skor tertinggi
-                  </button>
-</div>
-<div class="applicant-list" id="applicants">
-<article class="applicant-card" data-applicant-card="" data-distance="2.4" data-name="Made Arya Putra" data-status="new" data-wage="Rp 170.000">
-<div class="applicant-person">
-<span class="avatar">MA</span>
-<div class="applicant-person__copy">
-<strong>Made Arya Putra</strong>
-<span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,9 · 84 pekerjaan</span>
-<span>Angkut barang · Konstruksi ringan</span>
-</div>
-</div>
-<div class="applicant-fact"><span>Jarak</span><strong>2,4 km</strong></div>
-<div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div>
-<div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Baru</strong></div>
-<span class="score" title="Skor kecocokan">96</span>
-<div class="applicant-actions">
-<button aria-label="Lihat profil" class="icon-button" data-demo-action="" data-demo-message="Profil Made Arya Putra ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button>
-<button aria-label="Simpan pelamar" class="icon-button" data-demo-action="" data-demo-message="Made Arya Putra masuk daftar pilihan." data-demo-title="Pelamar disimpan" type="button"><span aria-hidden="true" class="material-symbols-rounded">bookmark</span></button>
-<button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button>
-</div>
-</article>
-<article class="applicant-card" data-applicant-card="" data-distance="4.1" data-name="Komang Dedi" data-status="shortlisted" data-wage="Rp 170.000">
-<div class="applicant-person">
-<span class="avatar">KD</span>
-<div class="applicant-person__copy">
-<strong>Komang Dedi</strong>
-<span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,8 · 62 pekerjaan</span>
-<span>Material proyek · Bongkar muat</span>
-</div>
-</div>
-<div class="applicant-fact"><span>Jarak</span><strong>4,1 km</strong></div>
-<div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div>
-<div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Dipertimbangkan</strong></div>
-<span class="score">93</span>
-<div class="applicant-actions">
-<button aria-label="Lihat profil" class="icon-button" data-demo-action="" data-demo-message="Profil Komang Dedi ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button>
-<button aria-label="Kirim pesan" class="icon-button" data-demo-action="" data-demo-message="Ruang percakapan dengan Komang Dedi dibuka." data-demo-title="Pesan dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">chat</span></button>
-<button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button>
-</div>
-</article>
-<article class="applicant-card" data-applicant-card="" data-distance="6.8" data-name="Kadek Surya" data-status="new" data-wage="Rp 170.000">
-<div class="applicant-person">
-<span class="avatar">KS</span>
-<div class="applicant-person__copy">
-<strong>Kadek Surya</strong>
-<span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,9 · 49 pekerjaan</span>
-<span>Angkut barang · Kerja tim</span>
-</div>
-</div>
-<div class="applicant-fact"><span>Jarak</span><strong>6,8 km</strong></div>
-<div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div>
-<div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Baru</strong></div>
-<span class="score">91</span>
-<div class="applicant-actions">
-<button aria-label="Lihat profil" class="icon-button" data-demo-action="" data-demo-message="Profil Kadek Surya ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button>
-<button aria-label="Simpan pelamar" class="icon-button" data-demo-action="" data-demo-message="Kadek Surya masuk daftar pilihan." data-demo-title="Pelamar disimpan" type="button"><span aria-hidden="true" class="material-symbols-rounded">bookmark</span></button>
-<button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button>
-</div>
-</article>
-<article class="applicant-card" data-applicant-card="" data-distance="3.3" data-name="Wayan Raka" data-status="hired" data-wage="Rp 170.000">
-<div class="applicant-person">
-<span class="avatar">WR</span>
-<div class="applicant-person__copy">
-<strong>Wayan Raka</strong>
-<span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,7 · 103 pekerjaan</span>
-<span>Bongkar muat · Konstruksi</span>
-</div>
-</div>
-<div class="applicant-fact"><span>Jarak</span><strong>3,3 km</strong></div>
-<div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div>
-<div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Terpilih</strong></div>
-<span class="score">89</span>
-<div class="applicant-actions">
-<button aria-label="Lihat profil" class="icon-button" data-demo-action="" data-demo-message="Profil Wayan Raka ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button>
-<button aria-label="Lihat bukti konfirmasi pekerjaan" class="icon-button" data-contract-action="" type="button"><span aria-hidden="true" class="material-symbols-rounded">contract</span></button>
-<button class="button button--outline button--small" disabled="" type="button">Dipilih</button>
-</div>
-</article>
-<article class="applicant-card" data-applicant-card="" data-distance="9.2" data-name="Nyoman Adi" data-status="new" data-wage="Rp 170.000">
-<div class="applicant-person">
-<span class="avatar">NA</span>
-<div class="applicant-person__copy">
-<strong>Nyoman Adi</strong>
-<span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,6 · 31 pekerjaan</span>
-<span>Angkut barang · Pekerja harian</span>
-</div>
-</div>
-<div class="applicant-fact"><span>Jarak</span><strong>9,2 km</strong></div>
-<div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div>
-<div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Baru</strong></div>
-<span class="score score--medium">82</span>
-<div class="applicant-actions">
-<button aria-label="Lihat profil" class="icon-button" data-demo-action="" data-demo-message="Profil Nyoman Adi ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button>
-<button aria-label="Simpan pelamar" class="icon-button" data-demo-action="" data-demo-message="Nyoman Adi masuk daftar pilihan." data-demo-title="Pelamar disimpan" type="button"><span aria-hidden="true" class="material-symbols-rounded">bookmark</span></button>
-<button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button>
-</div>
-</article>
-</div>
-</div>
-<aside>
-<article class="card">
-<header class="card__header">
-<div class="card__header-copy"><h3 class="card-title">Pemenuhan Kebutuhan</h3><p>Target 8 pekerja untuk pekerjaan ini.</p></div>
-</header>
-<div class="card__body">
-<div class="quota-ring" data-quota-ring="">
-<div class="quota-ring__copy"><strong data-current="5" data-quota-value="" data-total="8">5/8</strong><span>Pekerja dipilih</span></div>
-</div>
-<div class="summary-list">
-<div class="summary-row"><span>Sudah dipilih</span><strong data-selected-count="">5 pekerja</strong></div>
-<div class="summary-row"><span>Masih dibutuhkan</span><strong class="text-orange" data-remaining-count="">3 pekerja</strong></div>
-<div class="summary-row"><span>Batas memilih pekerja</span><strong>21 Jul 2026</strong></div>
-</div>
-</div>
-</article>
-<article class="card" style="margin-top: 18px">
-<header class="card__header">
-<div class="card__header-copy"><h3 class="card-title">Ringkasan Upah</h3><p>Upah berlaku sama untuk setiap pekerja dan tidak dipengaruhi jarak.</p></div>
-</header>
-<div class="card__body">
-<div class="summary-list"><div class="summary-row"><span>Rekomendasi Mekard / pekerja</span><strong>Rp 170.000</strong></div><div class="summary-row"><span>Tambahan pemberi kerja</span><strong>Rp 0</strong></div><div class="summary-row"><span>Upah final / pekerja</span><strong data-final-wage="">Rp 170.000</strong></div><div class="summary-row"><span>Jumlah pekerja</span><strong>8 orang</strong></div><div class="summary-row"><span>Perkiraan total anggaran</span><strong data-total-budget="">Rp 1.360.000</strong></div><div class="summary-row"><span>Anggaran pekerja terpilih</span><strong data-selected-budget="">Rp 850.000</strong></div></div>
-<div class="system-note system-note--compact"><span aria-hidden="true" class="material-symbols-rounded">handshake</span><span>Jarak hanya ditampilkan sebagai pertimbangan pekerja. Pembayaran dilakukan langsung berdasarkan upah yang tercantum pada lowongan.</span></div>
-</div>
-</article>
-</aside>
-</div>
-</section>
-<section class="tab-panel" data-tab-group="job-detail" id="detail-panel">
-<div class="detail-grid">
-<article class="card detail-block">
-<header class="card__header"><div class="card__header-copy"><h3 class="card-title">Deskripsi Pekerjaan</h3><p>Informasi yang ditampilkan kepada pekerja.</p></div></header>
-<div class="card__body"><p>Memindahkan semen, pasir, bata, dan material ringan dari area bongkar menuju tempat penyimpanan proyek. Pekerja mengikuti arahan mandor, menjaga area tetap aman, dan menggunakan alat pelindung yang disediakan.</p></div>
-</article>
-<article class="card detail-block">
-<header class="card__header"><div class="card__header-copy"><h3 class="card-title">Rincian Pekerjaan</h3><p>Indikator objektif yang digunakan sistem untuk menghitung upah.</p></div></header>
-<div class="card__body">
-<div class="detail-list"><div><span>Kategori</span><strong>Angkut &amp; Pindahan</strong></div><div><span>Durasi kerja</span><strong>5 jam</strong></div><div><span>Aktivitas fisik</span><strong>Berat</strong></div><div><span>Berat objek</span><strong>Di atas 15 kg</strong></div><div><span>Ketinggian / kedalaman</span><strong>Level dasar</strong></div><div><span>Alat &amp; bahan kerja</span><strong>Level aman</strong></div><div><span>Kondisi udara &amp; ruang</span><strong>Cuaca langsung</strong></div><div><span>Waktu kerja</span><strong>Jam normal</strong></div><div><span>APD</span><strong>Disediakan</strong></div><div><span>Sertifikat khusus</span><strong>Tidak diperlukan</strong></div></div>
-</div>
-</article>
-<article class="card detail-block">
-<header class="card__header"><div class="card__header-copy"><h3 class="card-title">Lokasi Kerja</h3><p>Area kerja dan instruksi kedatangan.</p></div></header>
-<div class="card__body"><p>Jl. Mahendradata No. 18, Denpasar Barat, Bali. Masuk melalui gerbang proyek sebelah utara dan lapor kepada petugas keamanan sebelum menuju area bongkar.</p></div>
-</article>
-<article class="card detail-block">
-<header class="card__header"><div class="card__header-copy"><h3 class="card-title">Catatan Upah</h3><p>Ketentuan upah yang tercatat pada lowongan.</p></div></header>
-<div class="card__body"><p>Upah final adalah Rp 170.000 untuk setiap pekerja selama 5 jam kerja. Jarak pekerja tidak mengubah nominal upah. Cara dan waktu pembayaran disepakati langsung, sedangkan konfirmasi pekerjaan dicatat oleh Mekard.</p></div>
-</article>
-</div>
-</section>
-<section class="tab-panel" data-tab-group="job-detail" id="activity-panel">
-<article class="card">
-<header class="card__header"><div class="card__header-copy"><h3 class="card-title">Perkembangan Lowongan</h3><p>Pembaruan terbaru dari lowongan dan pelamar.</p></div></header>
-<div class="card__body timeline">
-<div class="timeline-item">
-<span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">person_add</span></span>
-<div class="timeline-item__copy"><strong>Made Arya Putra melamar</strong><span>Skor kecocokan 96 dan jarak 2,4 km.</span></div>
-<time>18:42</time>
-</div>
-<div class="timeline-item">
-<span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">payments</span></span>
-<div class="timeline-item__copy"><strong>Rekomendasi upah diperbarui</strong><span>Estimasi diperbarui setelah indikator aktivitas fisik dan berat objek disesuaikan.</span></div>
-<time>17:10</time>
-</div>
-<div class="timeline-item">
-<span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">group_add</span></span>
-<div class="timeline-item__copy"><strong>Wayan Raka dipilih</strong><span>Wayan sudah diberi kabar dan kebutuhan pekerja telah diperbarui.</span></div>
-<time>14:25</time>
-</div>
-<div class="timeline-item">
-<span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">publish</span></span>
-<div class="timeline-item__copy"><strong>Lowongan dipublikasikan</strong><span>Lowongan tersedia untuk pekerja di radius 15 km.</span></div>
-<time>19 Jul</time>
-</div>
-</div>
-</article>
-</section>
+<section aria-labelledby="job-title" class="card job-hero"><div class="job-hero__top"><div><div class="job-hero__title-row"><h2 id="job-title">Angkut Material Bangunan</h2><span class="status status--active">Aktif</span></div><div class="job-hero__meta"><span><span aria-hidden="true" class="material-symbols-rounded">location_on</span> Denpasar Barat, Bali</span><span><span aria-hidden="true" class="material-symbols-rounded">calendar_month</span> 22 Juli 2026, 08:00 WITA</span><span><span aria-hidden="true" class="material-symbols-rounded">tag</span> MK-1048</span></div></div><div class="content-header__actions"><button class="button button--outline" data-demo-action="" data-demo-message="Tautan lowongan siap dibagikan." data-demo-title="Tautan disalin" type="button"><span aria-hidden="true" class="material-symbols-rounded">share</span> Bagikan</button><a class="button button--dark" href="../create/"><span aria-hidden="true" class="material-symbols-rounded">edit</span> Edit</a><button class="button button--danger" data-demo-action="" data-demo-message="Lowongan tidak menerima pelamar baru sementara waktu." data-demo-title="Lowongan dijeda" type="button"><span aria-hidden="true" class="material-symbols-rounded">pause</span> Jeda</button></div></div><div class="job-hero__stats"><div class="job-hero__stat"><strong data-new-applicant-count="">4</strong><span>Pelamar baru</span></div><div class="job-hero__stat"><strong data-current="5" data-quota-value="" data-total="8">5/8</strong><span>Kebutuhan terisi</span></div><div class="job-hero__stat"><strong data-waiting-count="">1</strong><span>Menunggu konfirmasi selesai</span></div><div class="job-hero__stat"><strong>Rp 170.000</strong><span>Upah per pekerja</span></div></div></section>
+<nav aria-label="Navigasi detail lowongan" class="card tabs" data-tabs="job-detail"><button aria-selected="true" class="tab-button is-active" data-tab-target="applicants-panel" role="tab" type="button"><span aria-hidden="true" class="material-symbols-rounded">group</span> Pelamar <span class="status status--info" data-new-applicant-count="">4</span></button><button aria-selected="false" class="tab-button" data-tab-target="work-panel" role="tab" type="button"><span aria-hidden="true" class="material-symbols-rounded">work_history</span> Pekerjaan <span class="status status--pending" data-waiting-badge="">1</span></button><button aria-selected="false" class="tab-button" data-tab-target="detail-panel" role="tab" type="button"><span aria-hidden="true" class="material-symbols-rounded">assignment</span> Detail Lowongan</button><button aria-selected="false" class="tab-button" data-tab-target="activity-panel" role="tab" type="button"><span aria-hidden="true" class="material-symbols-rounded">history</span> Aktivitas</button></nav>
+<section aria-labelledby="applicants" class="tab-panel is-active" data-tab-group="job-detail" id="applicants-panel"><div class="applicants-layout"><div><div class="card filter-bar"><label class="filter-input"><span aria-hidden="true" class="material-symbols-rounded">search</span><span class="sr-only">Cari nama pelamar</span><input class="input" data-detail-search="" id="applicants" placeholder="Cari nama pelamar..." type="search"/></label><label><span class="sr-only">Filter status</span><select class="select" data-applicant-status=""><option value="all">Semua status</option><option value="new">Baru</option><option value="hired">Terpilih</option></select></label><label><span class="sr-only">Filter jarak</span><select class="select" data-applicant-distance=""><option value="999">Semua jarak</option><option value="3">Maks. 3 km</option><option value="5">Maks. 5 km</option><option value="10">Maks. 10 km</option></select></label><button class="button button--outline" data-reset-filter="" type="button">Reset</button></div><div class="inline-actions native-inline-spread"><span class="muted native-result-text" data-applicant-result="">5 pelamar ditampilkan</span><button class="button button--ghost button--small" data-demo-action="" data-demo-message="Pelamar diurutkan berdasarkan skor kecocokan." data-demo-title="Urutan diperbarui" type="button"><span aria-hidden="true" class="material-symbols-rounded">swap_vert</span> Skor tertinggi</button></div><div class="applicant-list"><article class="applicant-card" data-applicant-card="" data-applicant-id="1" data-distance="2.4" data-initials="MA" data-name="Made Arya Putra" data-specialties="Angkut barang · Konstruksi ringan" data-status="new" data-wage="Rp 170.000"><div class="applicant-person"><span class="avatar">MA</span><div class="applicant-person__copy"><strong>Made Arya Putra</strong><span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,9 · 84 pekerjaan</span><span>Angkut barang · Konstruksi ringan</span></div></div><div class="applicant-fact"><span>Jarak</span><strong>2,4 km</strong></div><div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div><div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Baru</strong></div><span class="score">96</span><div class="applicant-actions"><button aria-label="Lihat profil Made Arya Putra" class="icon-button" data-demo-action="" data-demo-message="Profil Made Arya Putra ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button><button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button></div></article><article class="applicant-card" data-applicant-card="" data-applicant-id="2" data-distance="4.1" data-initials="KD" data-name="Komang Dedi" data-specialties="Material proyek · Bongkar muat" data-status="new" data-wage="Rp 170.000"><div class="applicant-person"><span class="avatar">KD</span><div class="applicant-person__copy"><strong>Komang Dedi</strong><span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,8 · 62 pekerjaan</span><span>Material proyek · Bongkar muat</span></div></div><div class="applicant-fact"><span>Jarak</span><strong>4,1 km</strong></div><div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div><div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Baru</strong></div><span class="score">93</span><div class="applicant-actions"><button aria-label="Lihat profil Komang Dedi" class="icon-button" data-demo-action="" data-demo-message="Profil Komang Dedi ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button><button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button></div></article><article class="applicant-card" data-applicant-card="" data-applicant-id="3" data-distance="6.8" data-initials="KS" data-name="Kadek Surya" data-specialties="Angkut barang · Kerja tim" data-status="new" data-wage="Rp 170.000"><div class="applicant-person"><span class="avatar">KS</span><div class="applicant-person__copy"><strong>Kadek Surya</strong><span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,9 · 49 pekerjaan</span><span>Angkut barang · Kerja tim</span></div></div><div class="applicant-fact"><span>Jarak</span><strong>6,8 km</strong></div><div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div><div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Baru</strong></div><span class="score">91</span><div class="applicant-actions"><button aria-label="Lihat profil Kadek Surya" class="icon-button" data-demo-action="" data-demo-message="Profil Kadek Surya ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button><button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button></div></article><article class="applicant-card" data-applicant-card="" data-applicant-id="4" data-distance="3.3" data-initials="WR" data-name="Wayan Raka" data-specialties="Bongkar muat · Konstruksi" data-status="hired" data-wage="Rp 170.000"><div class="applicant-person"><span class="avatar">WR</span><div class="applicant-person__copy"><strong>Wayan Raka</strong><span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,7 · 103 pekerjaan</span><span>Bongkar muat · Konstruksi</span></div></div><div class="applicant-fact"><span>Jarak</span><strong>3,3 km</strong></div><div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div><div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Terpilih</strong></div><span class="score">89</span><div class="applicant-actions"><button aria-label="Lihat profil Wayan Raka" class="icon-button" data-demo-action="" data-demo-message="Profil Wayan Raka ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button><button class="button button--outline button--small" data-open-tab="work-panel" type="button">Lihat Pekerjaan</button></div></article><article class="applicant-card" data-applicant-card="" data-applicant-id="5" data-distance="9.2" data-initials="NA" data-name="Nyoman Adi" data-specialties="Angkut barang · Pekerja harian" data-status="new" data-wage="Rp 170.000"><div class="applicant-person"><span class="avatar">NA</span><div class="applicant-person__copy"><strong>Nyoman Adi</strong><span class="rating"><span aria-hidden="true" class="material-symbols-rounded">star</span> 4,6 · 31 pekerjaan</span><span>Angkut barang · Pekerja harian</span></div></div><div class="applicant-fact"><span>Jarak</span><strong>9,2 km</strong></div><div class="applicant-fact"><span>Upah pekerjaan</span><strong>Rp 170.000</strong></div><div class="applicant-fact"><span>Status</span><strong data-applicant-status-label="">Baru</strong></div><span class="score score--medium">82</span><div class="applicant-actions"><button aria-label="Lihat profil Nyoman Adi" class="icon-button" data-demo-action="" data-demo-message="Profil Nyoman Adi ditampilkan." data-demo-title="Profil dibuka" type="button"><span aria-hidden="true" class="material-symbols-rounded">visibility</span></button><button class="button button--primary button--small" data-hire-applicant="" type="button">Pilih</button></div></article></div></div><aside><article class="card"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Pemenuhan Kebutuhan</h3><p>Target 8 pekerja untuk pekerjaan ini.</p></div></header><div class="card__body"><div class="quota-ring" data-quota-ring="" style="background:conic-gradient(var(--orange) 0 62.5%, #edf0ee 62.5% 100%)"><div class="quota-ring__copy"><strong data-current="5" data-quota-value="" data-total="8">5/8</strong><span>Pekerja dipilih</span></div></div><div class="summary-list"><div class="summary-row"><span>Sudah dipilih</span><strong data-selected-count="">5 pekerja</strong></div><div class="summary-row"><span>Masih dibutuhkan</span><strong class="text-orange" data-remaining-count="">3 pekerja</strong></div><div class="summary-row"><span>Menunggu konfirmasi selesai</span><strong data-waiting-count="">1 pekerja</strong></div><div class="summary-row"><span>Sudah selesai</span><strong data-completed-count="">2 pekerja</strong></div></div></div></article><article class="card native-stack-gap"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Ringkasan Upah</h3><p>Upah berlaku sama untuk setiap pekerja dan tidak dipengaruhi jarak.</p></div></header><div class="card__body"><div class="summary-list"><div class="summary-row"><span>Upah final / pekerja</span><strong>Rp 170.000</strong></div><div class="summary-row"><span>Jumlah pekerja</span><strong>8 orang</strong></div><div class="summary-row"><span>Perkiraan total anggaran</span><strong>Rp 1.360.000</strong></div><div class="summary-row"><span>Anggaran pekerja terpilih</span><strong data-selected-budget="">Rp 850.000</strong></div></div><div class="system-note system-note--compact"><span aria-hidden="true" class="material-symbols-rounded">lock</span><span>Setiap pekerja yang dipilih otomatis memiliki nota awal yang tidak dapat dihapus atau diubah sepihak.</span></div></div></article></aside></div></section>
+<section class="tab-panel" data-tab-group="job-detail" id="work-panel"><article class="card work-history-card"><header class="card__header work-history-header"><div class="card__header-copy"><h3 class="card-title">Riwayat &amp; Status Pekerjaan</h3><p>Nota awal dibuat saat pekerja dipilih. Nota akhir dibuat setelah pekerja dan pemberi kerja sama-sama mengonfirmasi selesai.</p></div><span class="immutable-badge"><span aria-hidden="true" class="material-symbols-rounded">lock</span> Riwayat tidak dapat dihapus</span></header><div class="card__body"><div class="work-summary-grid"><div><span>Berjalan</span><strong data-active-work-count="">2</strong></div><div><span>Menunggu konfirmasi Anda</span><strong data-waiting-count="">1</strong></div><div><span>Selesai</span><strong data-completed-count="">2</strong></div></div><div class="system-note work-history-note"><span aria-hidden="true" class="material-symbols-rounded">info</span><span>Riwayat ini adalah bukti kronologis, bukan tombol pembayaran. Perubahan tidak menghapus dokumen lama; koreksi di masa depan harus dibuat sebagai catatan tambahan baru.</span></div><div class="work-assignment-scroll" role="region" aria-label="Daftar pekerjaan dan nota pekerja" tabindex="0"><div class="work-assignment-list" data-work-assignment-list=""><article class="work-assignment-card" data-work-assignment="" data-assignment-id="assignment-wr" data-worker-name="Wayan Raka" data-initials="WR" data-distance="3.3" data-work-status="worker_completed" data-agreement-id="MKD-KSP-2026-WR1048" data-selected-at="20 Jul 2026, 14:25" data-worker-completed-at="21 Jul 2026, 18:10" data-completion-id="" data-completed-at="" data-assignment-search-value="Wayan Raka"><div class="work-assignment-person"><span class="avatar">WR</span><div><strong>Wayan Raka</strong><span>3,3 km dari lokasi kerja</span></div></div><div class="work-assignment-status"><span class="status status--pending" data-work-status-label="">Menunggu konfirmasi</span><small data-work-next-step="">Periksa hasil lalu konfirmasi selesai</small></div><div class="work-assignment-meta work-assignment-meta--agreement"><span>Nota awal</span><strong data-work-agreement-label="">MKD-KSP-2026-WR1048</strong><small>Dibuat 20 Jul 2026, 14:25</small></div><div class="work-assignment-meta work-assignment-meta--wage"><span>Upah tercatat</span><strong>Rp 170.000</strong><small>5 jam kerja</small></div><div class="work-assignment-menu"><button aria-expanded="false" aria-haspopup="menu" aria-label="Buka aksi pekerjaan Wayan Raka" class="icon-button work-assignment-menu-trigger" data-work-menu-trigger="" type="button"><span aria-hidden="true" class="material-symbols-rounded">more_vert</span></button><div aria-label="Aksi pekerjaan Wayan Raka" class="work-assignment-menu-popover" data-work-menu="" hidden role="menu"><button class="work-assignment-menu-item" data-open-agreement="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">description</span><span><strong>Nota Awal</strong><small>Lihat kesepakatan kerja</small></span></button><button class="work-assignment-menu-item work-assignment-menu-item--primary" data-confirm-completion="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">verified</span><span><strong>Konfirmasi Selesai</strong><small>Simpan penyelesaian pekerjaan</small></span></button></div></div></article><article class="work-assignment-card" data-work-assignment="" data-assignment-id="assignment-ps" data-worker-name="Putu Satria" data-initials="PS" data-distance="4.7" data-work-status="confirmed" data-agreement-id="MKD-KSP-2026-PS1048" data-selected-at="20 Jul 2026, 13:42" data-worker-completed-at="" data-completion-id="" data-completed-at="" data-assignment-search-value="Putu Satria"><div class="work-assignment-person"><span class="avatar">PS</span><div><strong>Putu Satria</strong><span>4,7 km dari lokasi kerja</span></div></div><div class="work-assignment-status"><span class="status status--info" data-work-status-label="">Berjalan</span><small data-work-next-step="">Menunggu pekerja menyelesaikan pekerjaan</small></div><div class="work-assignment-meta work-assignment-meta--agreement"><span>Nota awal</span><strong data-work-agreement-label="">MKD-KSP-2026-PS1048</strong><small>Dibuat 20 Jul 2026, 13:42</small></div><div class="work-assignment-meta work-assignment-meta--wage"><span>Upah tercatat</span><strong>Rp 170.000</strong><small>5 jam kerja</small></div><div class="work-assignment-menu"><button aria-expanded="false" aria-haspopup="menu" aria-label="Buka aksi pekerjaan Putu Satria" class="icon-button work-assignment-menu-trigger" data-work-menu-trigger="" type="button"><span aria-hidden="true" class="material-symbols-rounded">more_vert</span></button><div aria-label="Aksi pekerjaan Putu Satria" class="work-assignment-menu-popover" data-work-menu="" hidden role="menu"><button class="work-assignment-menu-item" data-open-agreement="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">description</span><span><strong>Nota Awal</strong><small>Lihat kesepakatan kerja</small></span></button></div></div></article><article class="work-assignment-card" data-work-assignment="" data-assignment-id="assignment-gy" data-worker-name="Gede Yasa" data-initials="GY" data-distance="5.1" data-work-status="completed" data-agreement-id="MKD-KSP-2026-GY1048" data-selected-at="19 Jul 2026, 17:20" data-worker-completed-at="21 Jul 2026, 16:12" data-completion-id="MKD-PNY-2026-GY1048" data-completed-at="21 Jul 2026, 16:45" data-assignment-search-value="Gede Yasa"><div class="work-assignment-person"><span class="avatar">GY</span><div><strong>Gede Yasa</strong><span>5,1 km dari lokasi kerja</span></div></div><div class="work-assignment-status"><span class="status status--active" data-work-status-label="">Selesai</span><small data-work-next-step="">Nota akhir telah tersimpan</small></div><div class="work-assignment-meta work-assignment-meta--agreement"><span>Nota awal</span><strong data-work-agreement-label="">MKD-KSP-2026-GY1048</strong><small>Dibuat 19 Jul 2026, 17:20</small></div><div class="work-assignment-meta work-assignment-meta--wage"><span>Upah tercatat</span><strong>Rp 170.000</strong><small>5 jam kerja</small></div><div class="work-assignment-menu"><button aria-expanded="false" aria-haspopup="menu" aria-label="Buka aksi pekerjaan Gede Yasa" class="icon-button work-assignment-menu-trigger" data-work-menu-trigger="" type="button"><span aria-hidden="true" class="material-symbols-rounded">more_vert</span></button><div aria-label="Aksi pekerjaan Gede Yasa" class="work-assignment-menu-popover" data-work-menu="" hidden role="menu"><button class="work-assignment-menu-item" data-open-agreement="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">description</span><span><strong>Nota Awal</strong><small>Lihat kesepakatan kerja</small></span></button><button class="work-assignment-menu-item work-assignment-menu-item--dark" data-open-completion="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">task_alt</span><span><strong>Nota Akhir</strong><small>Lihat bukti penyelesaian</small></span></button></div></div></article><article class="work-assignment-card" data-work-assignment="" data-assignment-id="assignment-kd" data-worker-name="Ketut Dharma" data-initials="KD" data-distance="2.9" data-work-status="confirmed" data-agreement-id="MKD-KSP-2026-KD1048" data-selected-at="19 Jul 2026, 15:08" data-worker-completed-at="" data-completion-id="" data-completed-at="" data-assignment-search-value="Ketut Dharma"><div class="work-assignment-person"><span class="avatar">KD</span><div><strong>Ketut Dharma</strong><span>2,9 km dari lokasi kerja</span></div></div><div class="work-assignment-status"><span class="status status--info" data-work-status-label="">Berjalan</span><small data-work-next-step="">Menunggu pekerja menyelesaikan pekerjaan</small></div><div class="work-assignment-meta work-assignment-meta--agreement"><span>Nota awal</span><strong data-work-agreement-label="">MKD-KSP-2026-KD1048</strong><small>Dibuat 19 Jul 2026, 15:08</small></div><div class="work-assignment-meta work-assignment-meta--wage"><span>Upah tercatat</span><strong>Rp 170.000</strong><small>5 jam kerja</small></div><div class="work-assignment-menu"><button aria-expanded="false" aria-haspopup="menu" aria-label="Buka aksi pekerjaan Ketut Dharma" class="icon-button work-assignment-menu-trigger" data-work-menu-trigger="" type="button"><span aria-hidden="true" class="material-symbols-rounded">more_vert</span></button><div aria-label="Aksi pekerjaan Ketut Dharma" class="work-assignment-menu-popover" data-work-menu="" hidden role="menu"><button class="work-assignment-menu-item" data-open-agreement="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">description</span><span><strong>Nota Awal</strong><small>Lihat kesepakatan kerja</small></span></button></div></div></article><article class="work-assignment-card" data-work-assignment="" data-assignment-id="assignment-ap" data-worker-name="Agus Putra" data-initials="AP" data-distance="7.4" data-work-status="completed" data-agreement-id="MKD-KSP-2026-AP1048" data-selected-at="19 Jul 2026, 11:30" data-worker-completed-at="21 Jul 2026, 15:05" data-completion-id="MKD-PNY-2026-AP1048" data-completed-at="21 Jul 2026, 15:32" data-assignment-search-value="Agus Putra"><div class="work-assignment-person"><span class="avatar">AP</span><div><strong>Agus Putra</strong><span>7,4 km dari lokasi kerja</span></div></div><div class="work-assignment-status"><span class="status status--active" data-work-status-label="">Selesai</span><small data-work-next-step="">Nota akhir telah tersimpan</small></div><div class="work-assignment-meta work-assignment-meta--agreement"><span>Nota awal</span><strong data-work-agreement-label="">MKD-KSP-2026-AP1048</strong><small>Dibuat 19 Jul 2026, 11:30</small></div><div class="work-assignment-meta work-assignment-meta--wage"><span>Upah tercatat</span><strong>Rp 170.000</strong><small>5 jam kerja</small></div><div class="work-assignment-menu"><button aria-expanded="false" aria-haspopup="menu" aria-label="Buka aksi pekerjaan Agus Putra" class="icon-button work-assignment-menu-trigger" data-work-menu-trigger="" type="button"><span aria-hidden="true" class="material-symbols-rounded">more_vert</span></button><div aria-label="Aksi pekerjaan Agus Putra" class="work-assignment-menu-popover" data-work-menu="" hidden role="menu"><button class="work-assignment-menu-item" data-open-agreement="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">description</span><span><strong>Nota Awal</strong><small>Lihat kesepakatan kerja</small></span></button><button class="work-assignment-menu-item work-assignment-menu-item--dark" data-open-completion="" role="menuitem" type="button"><span aria-hidden="true" class="material-symbols-rounded">task_alt</span><span><strong>Nota Akhir</strong><small>Lihat bukti penyelesaian</small></span></button></div></div></article></div><div class="job-list-empty" data-assignment-empty="" hidden><span aria-hidden="true" class="material-symbols-rounded">search_off</span><strong>Pekerja tidak ditemukan</strong><span>Coba ubah kata pencarian.</span></div></div></div></article></section>
+<section class="tab-panel" data-tab-group="job-detail" id="detail-panel"><div class="detail-grid"><article class="card detail-block"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Deskripsi Pekerjaan</h3><p>Informasi yang ditampilkan kepada pekerja.</p></div></header><div class="card__body"><p>Memindahkan semen, pasir, bata, dan material ringan dari area bongkar menuju tempat penyimpanan proyek. Pekerja mengikuti arahan mandor, menjaga area tetap aman, dan menggunakan alat pelindung yang disediakan.</p></div></article><article class="card detail-block"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Rincian Pekerjaan</h3><p>Indikator objektif yang digunakan sistem untuk menghitung upah.</p></div></header><div class="card__body"><div class="detail-list"><div><span>Kategori</span><strong>Angkut &amp; Pindahan</strong></div><div><span>Durasi kerja</span><strong>5 jam</strong></div><div><span>Aktivitas fisik</span><strong>Berat</strong></div><div><span>Berat objek</span><strong>Di atas 15 kg</strong></div><div><span>Ketinggian / kedalaman</span><strong>Level dasar</strong></div><div><span>Alat &amp; bahan kerja</span><strong>Level aman</strong></div><div><span>Kondisi udara &amp; ruang</span><strong>Cuaca langsung</strong></div><div><span>Waktu kerja</span><strong>Jam normal</strong></div><div><span>APD</span><strong>Disediakan</strong></div><div><span>Sertifikat khusus</span><strong>Tidak diperlukan</strong></div></div></div></article><article class="card detail-block"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Lokasi Kerja</h3><p>Area kerja dan instruksi kedatangan.</p></div></header><div class="card__body"><p>Jl. Mahendradata No. 18, Denpasar Barat, Bali. Masuk melalui gerbang proyek sebelah utara dan lapor kepada petugas keamanan sebelum menuju area bongkar.</p></div></article><article class="card detail-block"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Catatan &amp; Riwayat</h3><p>Ketentuan pencatatan yang berlaku untuk pekerjaan ini.</p></div></header><div class="card__body"><p>Saat pekerja dipilih, Mekard membuat nota awal kesepakatan. Setelah pekerja menandai tugas selesai dan pemberi kerja mengonfirmasi hasilnya, sistem membuat nota akhir penyelesaian. Kedua dokumen disimpan sebagai riwayat permanen dan tidak dapat dihapus.</p></div></article></div></section>
+<section class="tab-panel" data-tab-group="job-detail" id="activity-panel"><article class="card"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Perkembangan Lowongan</h3><p>Log kronologis aktivitas. Riwayat dokumen tetap tersimpan pada tab Pekerjaan.</p></div></header><div class="card__body timeline" data-activity-list=""><div class="timeline-item"> <span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">pending_actions</span></span><div class="timeline-item__copy"><strong>Wayan Raka menandai pekerjaan selesai</strong><span>Menunggu konfirmasi akhir dari pemberi kerja sebelum nota penyelesaian dibuat.</span></div><time>18:10</time></div><div class="timeline-item"> <span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">person_add</span></span><div class="timeline-item__copy"><strong>Made Arya Putra melamar</strong><span>Skor kecocokan 96 dan jarak 2,4 km.</span></div><time>17:42</time></div><div class="timeline-item"> <span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">task_alt</span></span><div class="timeline-item__copy"><strong>Pekerjaan Gede Yasa dikonfirmasi selesai</strong><span>Nota akhir penyelesaian MKD-PNY-2026-GY1048 dibuat dan disimpan permanen.</span></div><time>16:45</time></div><div class="timeline-item"> <span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">payments</span></span><div class="timeline-item__copy"><strong>Rekomendasi upah diperbarui</strong><span>Estimasi diperbarui setelah indikator aktivitas fisik dan berat objek disesuaikan.</span></div><time>17:10</time></div><div class="timeline-item"> <span class="timeline-item__icon"><span aria-hidden="true" class="material-symbols-rounded">publish</span></span><div class="timeline-item__copy"><strong>Lowongan dipublikasikan</strong><span>Lowongan tersedia untuk pekerja di radius 15 km.</span></div><time>19 Jul</time></div></div></article></section>
+<div class="modal-backdrop" data-hire-modal="" hidden><section aria-labelledby="hire-modal-title" aria-modal="true" class="modal" role="dialog"><div class="modal__body"><span class="modal__icon"><span aria-hidden="true" class="material-symbols-rounded">person_check</span></span><h2 id="hire-modal-title">Pilih pekerja ini?</h2><p>Dengan memilih <strong data-hire-name="">Pelamar</strong>, Anda mengonfirmasi jadwal, rincian pekerjaan, dan upah yang tercantum.</p><div class="note-lock-callout"><span aria-hidden="true" class="material-symbols-rounded">lock</span><span>Sistem akan langsung membuat nota awal kesepakatan. Dokumen ini menjadi riwayat permanen dan tidak dapat dihapus.</span></div><div class="modal__summary"><div><span>Upah per pekerja</span><strong>Rp 170.000</strong></div><div><span>Durasi kerja</span><strong>5 jam</strong></div><div><span>Jarak ke lokasi</span><strong data-hire-distance="">—</strong></div><div><span>Nota awal</span><strong class="text-orange">Dibuat otomatis</strong></div></div></div><footer class="modal__footer"><button class="button button--outline" data-modal-close="" type="button">Batal</button><button class="button button--primary" data-confirm-hire="" type="button"><span aria-hidden="true" class="material-symbols-rounded">check</span> Konfirmasi &amp; Buat Nota</button></footer></section></div>
+<div class="modal-backdrop" data-completion-modal="" hidden><section aria-labelledby="completion-modal-title" aria-modal="true" class="modal" role="dialog"><div class="modal__body"><span class="modal__icon"><span aria-hidden="true" class="material-symbols-rounded">task_alt</span></span><h2 id="completion-modal-title">Konfirmasi pekerjaan selesai?</h2><p><strong data-completion-worker="">Pekerja</strong> telah menandai pekerjaannya selesai. Konfirmasi hanya setelah hasil pekerjaan telah diperiksa.</p><div class="note-lock-callout"><span aria-hidden="true" class="material-symbols-rounded">verified</span><span>Setelah dikonfirmasi, sistem membuat nota akhir penyelesaian yang tersimpan permanen dan tidak dapat dihapus.</span></div><div class="modal__summary"><div><span>Nota awal</span><strong data-completion-agreement="">—</strong></div><div><span>Pekerja menandai selesai</span><strong data-completion-worker-time="">—</strong></div><div><span>Upah tercatat</span><strong>Rp 170.000</strong></div><div><span>Nota akhir</span><strong class="text-orange">Akan dibuat</strong></div></div></div><footer class="modal__footer"><button class="button button--outline" data-modal-close="" type="button">Belum, periksa lagi</button><button class="button button--primary" data-confirm-work-completion="" type="button"><span aria-hidden="true" class="material-symbols-rounded">verified</span> Konfirmasi Selesai</button></footer></section></div>
+<div class="modal-backdrop" data-note-modal="" hidden><section aria-labelledby="note-modal-title" aria-modal="true" class="modal modal--note" role="dialog"><div class="modal__body note-modal-body"><div class="note-document-heading"><div><p class="kicker">Dokumen Mekard</p><h2 id="note-modal-title" data-note-title="">Nota Awal Kesepakatan Kerja</h2><span data-note-id="">—</span></div><span class="status status--info" data-note-status="">Terkonfirmasi</span></div><div class="note-lock-callout note-lock-callout--strong"><span aria-hidden="true" class="material-symbols-rounded">lock</span><span>Dokumen dibuat otomatis dari konfirmasi sistem. Catatan ini tidak dapat dihapus atau diubah secara sepihak.</span></div><div class="note-sheet-grid"><section class="note-sheet-section"><h3>Pihak yang terikat</h3><div class="note-sheet-row"><span>Pemberi kerja</span><strong>Nusa Build</strong></div><div class="note-sheet-row"><span>Pekerja</span><strong data-note-worker="">—</strong></div></section><section class="note-sheet-section"><h3>Pekerjaan</h3><div class="note-sheet-row"><span>Kode lowongan</span><strong>MK-1048</strong></div><div class="note-sheet-row"><span>Nama pekerjaan</span><strong>Angkut Material Bangunan</strong></div><div class="note-sheet-row"><span>Durasi</span><strong>5 jam</strong></div><div class="note-sheet-row"><span>Lokasi</span><strong>Jl. Mahendradata No. 18, Denpasar Barat, Bali</strong></div><div class="note-sheet-row"><span>Jadwal mulai</span><strong>22 Juli 2026, 08:00 WITA</strong></div></section><section class="note-sheet-section"><h3>Upah tercatat</h3><div class="note-sheet-row"><span>Upah per pekerja</span><strong>Rp 170.000</strong></div><div class="note-sheet-row"><span>Jarak pekerja</span><strong data-note-distance="">—</strong></div><p class="note-section-copy">Jarak ditampilkan sebagai informasi dan tidak mengubah nominal upah.</p></section><section class="note-sheet-section"><h3 data-note-confirmation-heading="">Konfirmasi awal</h3><div class="note-sheet-row"><span>Nota awal</span><strong data-note-agreement="">—</strong></div><div class="note-sheet-row"><span>Pekerja dipilih</span><strong data-note-selected="">—</strong></div><div data-note-completion-only="" hidden><div class="note-sheet-row"><span>Pekerja menandai selesai</span><strong data-note-worker-completed="">—</strong></div><div class="note-sheet-row"><span>Pemberi kerja mengonfirmasi</span><strong data-note-completed="">—</strong></div></div><p class="note-section-copy" data-note-agreement-copy="">Pemberi kerja mengonfirmasi pekerja, rincian tugas, jadwal, dan upah yang tercantum pada lowongan.</p></section></div></div><footer class="modal__footer"><button class="button button--outline" data-modal-close="" type="button">Tutup</button><button class="button button--primary" data-note-print="" type="button"><span aria-hidden="true" class="material-symbols-rounded">download</span> Cetak / Simpan PDF</button></footer></section></div>
 </main>
 </div>
 </div>
-<div class="modal-backdrop" data-modal-backdrop="" hidden="">
-<section aria-labelledby="hire-modal-title" aria-modal="true" class="modal" role="dialog">
-<div class="modal__body">
-<span aria-hidden="true" class="modal__icon material-symbols-rounded">person_check</span>
-<h2 id="hire-modal-title">Pilih pekerja ini?</h2>
-<p>Dengan memilih <strong data-modal-name="">Pelamar</strong>, Anda mengonfirmasi jadwal, rincian pekerjaan, dan upah yang tercantum. Sistem akan membuat catatan konfirmasi pekerjaan.</p>
-<div class="modal__summary"><div><span>Upah per pekerja</span><strong data-modal-wage="">—</strong></div><div><span>Durasi kerja</span><strong>5 jam</strong></div><div><span>Jarak ke lokasi</span><strong data-modal-distance="">—</strong></div><div><span>Catatan sistem</span><strong class="text-orange">Akan dibuat</strong></div></div>
-</div>
-<footer class="modal__footer">
-<button class="button button--outline" data-modal-close="" type="button">Batal</button>
-<button class="button button--primary" data-confirm-hire="" type="button"><span aria-hidden="true" class="material-symbols-rounded">check</span> Konfirmasi &amp; Pilih</button>
-</footer>
-</section>
-</div>
 <div aria-live="polite" class="toast-region" data-toast-region=""></div>
+</div>
 <script src="../../../assets/dashboard.js"></script>
 </body>
 </html>

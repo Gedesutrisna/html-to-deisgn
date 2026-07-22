@@ -3,284 +3,73 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Dashboard pemberi kerja Mekard untuk melihat lowongan, pelamar, dan kebutuhan pekerja." name="description"/>
-<title>Dashboard Pemberi Kerja | Mekard</title>
+<meta content="Dashboard pemberi kerja untuk memantau lowongan, pelamar, kebutuhan pekerja, dan anggaran." name="description"/>
+<title>Dashboard Utama | Mekard Pemberi Kerja</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet"/>
 <link href="../../assets/dashboard.css" rel="stylesheet"/>
 </head>
-<body data-sidebar="normal">
+<body>
+<div class="mekard-dashboard" data-sidebar="normal">
 <div class="app-shell">
 <aside aria-label="Navigasi pemberi kerja" class="sidebar">
 <div class="sidebar__header">
-<a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="./"><img alt="" aria-hidden="true" class="brand__mark" height="197" src="../../assets/mekard-mark.png" width="197"/><span class="brand__word">mekard.</span></a>
-<button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span>
-</button>
+<a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="./"><span aria-hidden="true" class="brand__symbol">m</span><span class="brand__word">mekard.</span></a>
+<button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button"><span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span></button>
 </div>
 <div class="sidebar__content">
 <p class="sidebar__label">Workspace</p>
-<nav class="sidebar__nav">
-<a class="nav-item is-active" data-tooltip="Dashboard" href="./">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">space_dashboard</span>
-<span class="nav-item__text">Dashboard</span>
-</a>
-<a class="nav-item" data-tooltip="Buat Lowongan" href="../jobs/create/">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">add_circle</span>
-<span class="nav-item__text">Buat Lowongan</span>
-</a>
-<a class="nav-item" data-tooltip="Lowongan Saya" href="../jobs/123/">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">work</span>
-<span class="nav-item__text">Lowongan Saya</span>
-<span class="nav-item__badge">4</span>
-</a>
-<a class="nav-item" data-tooltip="Pelamar" href="../jobs/123/#applicants">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">group</span>
-<span class="nav-item__text">Pelamar</span>
-<span class="nav-item__badge">28</span>
-</a>
-<a class="nav-item" data-tooltip="Pekerja Terpilih" href="../jobs/123/#applicants">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">person_check</span>
-<span class="nav-item__text">Pekerja Terpilih</span>
-</a>
-
-</nav>
+<nav class="sidebar__nav"><a class="nav-item is-active" data-tooltip="Dashboard" href="./">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">space_dashboard</span><span class="nav-item__text">Dashboard</span>
+</a><a class="nav-item" data-tooltip="Buat Lowongan" href="../jobs/create/">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">add_circle</span><span class="nav-item__text">Buat Lowongan</span>
+</a><a class="nav-item" data-tooltip="Lowongan Saya" href="../jobs/">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">work</span><span class="nav-item__text">Lowongan Saya</span><span class="nav-item__badge">4</span>
+</a><a class="nav-item" data-tooltip="Pelamar" href="../jobs/123/#applicants">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">group</span><span class="nav-item__text">Pelamar</span><span class="nav-item__badge">28</span>
+</a><a class="nav-item" data-tooltip="Pekerja Terpilih" href="../jobs/123/#work">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">person_check</span><span class="nav-item__text">Pekerja Terpilih</span>
+</a></nav>
 <div class="sidebar__divider"></div>
 <p class="sidebar__label">Pengaturan</p>
 <nav class="sidebar__nav">
-<a class="nav-item" data-tooltip="Profil Perusahaan" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">apartment</span>
-<span class="nav-item__text">Profil Perusahaan</span>
-</a>
-<a class="nav-item" data-tooltip="Notifikasi" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">notifications</span>
-<span class="nav-item__text">Notifikasi</span>
-</a>
-<a class="nav-item" data-tooltip="Bantuan" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">help</span>
-<span class="nav-item__text">Bantuan</span>
-</a>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Profil Perusahaan" data-tooltip="Profil Perusahaan" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">apartment</span><span class="nav-item__text">Profil Perusahaan</span></button>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Notifikasi" data-tooltip="Notifikasi" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">notifications</span><span class="nav-item__text">Notifikasi</span></button>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Bantuan" data-tooltip="Bantuan" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">help</span><span class="nav-item__text">Bantuan</span></button>
 </nav>
 </div>
 <div class="sidebar__footer">
-<a class="sidebar-profile" href="#profil">
-<span class="avatar">NB</span>
-<span class="sidebar-profile__copy">
-<strong>Nusa Build</strong>
-<span>Akun pemberi kerja</span>
-</span>
-<span aria-hidden="true" class="material-symbols-rounded">more_vert</span>
-</a>
+<button class="sidebar-profile" data-demo-action="" data-demo-message="Nusa Build adalah akun pemberi kerja terverifikasi." data-demo-title="Profil perusahaan" id="profile" type="button">
+<span class="avatar">NB</span><span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span><span aria-hidden="true" class="material-symbols-rounded">more_vert</span>
+</button>
 </div>
 </aside>
-<div aria-hidden="true" class="mobile-overlay" data-mobile-overlay=""></div>
+<button aria-label="Tutup navigasi" class="mobile-overlay" data-mobile-overlay="" type="button"></button>
 <div class="main-shell">
 <header class="topbar">
 <div class="topbar__left">
-<button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span>
-</button>
-<div class="page-heading">
-<span class="page-heading__eyebrow">Dasbor Pemberi Kerja</span>
-<h1>Dashboard Utama</h1>
+<button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar (Alt+S)" type="button"><span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span></button>
+<div class="page-heading"><span class="page-heading__eyebrow">Dasbor Pemberi Kerja</span><h1>Dashboard Utama</h1></div>
 </div>
-</div>
-<div class="topbar__right">
-<label class="topbar-search">
-<span aria-hidden="true" class="material-symbols-rounded">search</span>
-<span class="sr-only">Cari lowongan atau pelamar</span>
-<input placeholder="Cari lowongan atau pelamar..." type="search"/>
+<div class="topbar__right"><label class="topbar-search">
+<span aria-hidden="true" class="material-symbols-rounded">search</span><span class="sr-only">Cari lowongan atau pelamar...</span>
+<input placeholder="Cari lowongan atau pelamar..." type="search" data-dashboard-search=""/>
 </label>
-<button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="Ada 6 pembaruan baru dari pelamar." data-demo-title="Notifikasi" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">notifications</span>
-</button>
-<button aria-label="Buka profil" class="header-profile" type="button">
-<span class="avatar">NB</span>
-<span class="header-profile__copy">
-<strong>Nusa Build</strong>
-<span>Pemberi kerja terverifikasi</span>
-</span>
-<span aria-hidden="true" class="material-symbols-rounded">expand_more</span>
-</button>
+<button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="Ada 6 pembaruan baru dari pelamar." data-demo-title="Notifikasi" type="button"><span aria-hidden="true" class="material-symbols-rounded">notifications</span></button>
+<button aria-label="Buka profil" class="header-profile" data-demo-action="" data-demo-message="Menu profil siap dihubungkan ke autentikasi produksi." data-demo-title="Profil" type="button"><span class="avatar">NB</span><span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span><span aria-hidden="true" class="material-symbols-rounded">expand_more</span></button>
 </div>
 </header>
 <main class="app-content" id="main-content">
-<section aria-labelledby="welcome-title" class="content-header">
-<div class="content-header__copy">
-<p class="kicker">Ringkasan hari ini</p>
-<h2 id="welcome-title">Selamat malam, Nusa Build.</h2>
-<p>Lihat lowongan aktif, pilih pelamar yang cocok, dan cek kebutuhan pekerja sebelum pekerjaan dimulai.</p>
-</div>
-<div class="content-header__actions">
-<button class="button button--outline" data-demo-action="" data-demo-message="Ringkasan kebutuhan pekerja sedang disiapkan." data-demo-title="Ringkasan diunduh" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">download</span>
-                Unduh Ringkasan
-              </button>
-<a class="button button--primary" href="../jobs/create/">
-<span aria-hidden="true" class="material-symbols-rounded">add</span>
-                Buat Lowongan
-              </a>
-</div>
-</section>
-<section aria-label="Statistik utama" class="stats-grid">
-<article class="card metric-card">
-<div class="metric-card__top">
-<span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">work</span></span>
-<span class="metric-card__trend"><span aria-hidden="true" class="material-symbols-rounded">trending_up</span> +1 minggu ini</span>
-</div>
-<strong class="metric-card__value">4</strong>
-<span class="metric-card__label">Lowongan aktif</span>
-</article>
-<article class="card metric-card">
-<div class="metric-card__top">
-<span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">person_add</span></span>
-<span class="metric-card__trend"><span aria-hidden="true" class="material-symbols-rounded">trending_up</span> +12,5%</span>
-</div>
-<strong class="metric-card__value">28</strong>
-<span class="metric-card__label">Pelamar baru untuk dilihat</span>
-</article>
-<article class="card metric-card">
-<div class="metric-card__top">
-<span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">groups</span></span>
-<span class="metric-card__trend"><span aria-hidden="true" class="material-symbols-rounded">check_circle</span> 71% terpenuhi</span>
-</div>
-<strong class="metric-card__value">17/24</strong>
-<span class="metric-card__label">Kebutuhan pekerja terpenuhi</span>
-</article>
-<article class="card metric-card">
-<div class="metric-card__top">
-<span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">payments</span></span>
-<span class="metric-card__trend is-down"><span aria-hidden="true" class="material-symbols-rounded">south_east</span> 4,2% lebih hemat</span>
-</div>
-<strong class="metric-card__value">Rp 8,75 jt</strong>
-<span class="metric-card__label">Estimasi total upah aktif</span>
-</article>
-</section>
-<section class="dashboard-grid">
-<article class="card chart-shell">
-<header class="card__header">
-<div class="card__header-copy">
-<h3 class="card-title">Perkembangan Lowongan</h3>
-<p>Pelamar masuk dan pekerja yang dipilih dalam 7 hari terakhir.</p>
-</div>
-<div aria-label="Legenda grafik" class="chart-legend">
-<span><i></i> Pelamar</span>
-<span><i></i> Dipilih</span>
-</div>
-</header>
-<div class="card__body">
-<div aria-label="Grafik pelamar dan pekerja yang dipilih selama tujuh hari" class="bar-chart" role="img">
-<div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height: 44%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height: 18%"></span></div><span class="bar-chart__label">Sen</span></div>
-<div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height: 58%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height: 25%"></span></div><span class="bar-chart__label">Sel</span></div>
-<div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height: 51%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height: 32%"></span></div><span class="bar-chart__label">Rab</span></div>
-<div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height: 76%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height: 36%"></span></div><span class="bar-chart__label">Kam</span></div>
-<div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height: 69%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height: 41%"></span></div><span class="bar-chart__label">Jum</span></div>
-<div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height: 88%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height: 54%"></span></div><span class="bar-chart__label">Sab</span></div>
-<div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height: 62%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height: 46%"></span></div><span class="bar-chart__label">Min</span></div>
-</div>
-</div>
-</article>
-<aside class="card">
-<header class="card__header">
-<div class="card__header-copy">
-<h3 class="card-title">Perlu Tindakan</h3>
-<p>Prioritas yang perlu diselesaikan.</p>
-</div>
-<span class="status status--pending">4 tugas</span>
-</header>
-<div class="card__body">
-<div class="action-list">
-<a class="action-item" href="../jobs/123/">
-<span aria-hidden="true" class="action-item__icon material-symbols-rounded">group</span>
-<span class="action-item__copy"><strong>12 pelamar baru</strong><span>Angkut Material Bangunan</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">chevron_right</span>
-</a>
-<a class="action-item" href="../jobs/123/">
-<span aria-hidden="true" class="action-item__icon material-symbols-rounded">warning</span>
-<span class="action-item__copy"><strong>Masih butuh 3 pekerja</strong><span>Mulai dalam 2 hari</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">chevron_right</span>
-</a>
-<a class="action-item" href="#">
-<span aria-hidden="true" class="action-item__icon material-symbols-rounded">person_check</span>
-<span class="action-item__copy"><strong>2 pekerja menunggu kabar</strong><span>Segera beri kepastian</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">chevron_right</span>
-</a>
-<a class="action-item" href="#">
-<span aria-hidden="true" class="action-item__icon material-symbols-rounded">edit_calendar</span>
-<span class="action-item__copy"><strong>1 lowongan perlu diperbarui</strong><span>Periksa kembali jadwal mulai</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">chevron_right</span>
-</a>
-</div>
-</div>
-</aside>
-</section>
-<section aria-labelledby="jobs-table-title" class="card table-card">
-<header class="card__header">
-<div class="card__header-copy">
-<h3 class="card-title" id="jobs-table-title">Status Lowongan Aktif</h3>
-<p>Ringkasan kebutuhan pekerja dan aktivitas pelamar.</p>
-</div>
-<a class="button button--outline button--small" href="../jobs/123/">Lihat Semua</a>
-</header>
-<div class="table-scroll">
-<table class="data-table">
-<thead>
-<tr>
-<th>Lowongan</th>
-<th>Status</th>
-<th>Pelamar</th>
-<th>Kebutuhan pekerja</th>
-<th>Mulai</th>
-<th>Upah / pekerja</th>
-<th>Aksi</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="job-cell"><strong>Angkut Material Bangunan</strong><span>Denpasar Barat · ID #MK-1048</span></td>
-<td><span class="status status--active">Aktif</span></td>
-<td><strong>12</strong> <span class="muted">baru</span></td>
-<td class="quota-cell"><div class="quota-cell__top"><span>5 dari 8 pekerja</span><strong>62%</strong></div><div class="progress"><div class="progress__bar" style="width: 62%"></div></div></td>
-<td>22 Jul 2026</td>
-<td>Rp 150.000</td>
-<td><a class="table-link" href="../jobs/123/">Kelola <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td>
-</tr>
-<tr>
-<td class="job-cell"><strong>Bersih-Bersih Villa Harian</strong><span>Canggu · ID #MK-1044</span></td>
-<td><span class="status status--active">Aktif</span></td>
-<td><strong>8</strong> <span class="muted">baru</span></td>
-<td class="quota-cell"><div class="quota-cell__top"><span>4 dari 4 pekerja</span><strong>100%</strong></div><div class="progress"><div class="progress__bar" style="width: 100%"></div></div></td>
-<td>24 Jul 2026</td>
-<td>Rp 110.000</td>
-<td><a class="table-link" href="../jobs/123/">Kelola <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td>
-</tr>
-<tr>
-<td class="job-cell"><strong>Instalasi Lampu Area Taman</strong><span>Ubud · ID #MK-1039</span></td>
-<td><span class="status status--pending">Ditinjau</span></td>
-<td><strong>5</strong> <span class="muted">pelamar</span></td>
-<td class="quota-cell"><div class="quota-cell__top"><span>2 dari 3 pekerja</span><strong>67%</strong></div><div class="progress"><div class="progress__bar" style="width: 67%"></div></div></td>
-<td>27 Jul 2026</td>
-<td>Rp 210.000</td>
-<td><a class="table-link" href="../jobs/123/">Kelola <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td>
-</tr>
-<tr>
-<td class="job-cell"><strong>Perawatan Taman Mingguan</strong><span>Sanur · ID #MK-1031</span></td>
-<td><span class="status status--draft">Draft</span></td>
-<td><span class="muted">Belum tayang</span></td>
-<td class="quota-cell"><div class="quota-cell__top"><span>0 dari 2 pekerja</span><strong>0%</strong></div><div class="progress"><div class="progress__bar" style="width: 0%"></div></div></td>
-<td>Belum diatur</td>
-<td>Rp 125.000</td>
-<td><a class="table-link" href="../jobs/create/">Lanjutkan <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
+<section aria-labelledby="welcome-title" class="content-header"><div class="content-header__copy"><p class="kicker">Ringkasan hari ini</p><h2 id="welcome-title">Selamat malam, Nusa Build.</h2><p>Lihat lowongan aktif, pilih pelamar yang cocok, dan cek kebutuhan pekerja sebelum pekerjaan dimulai.</p></div><div class="content-header__actions"><button class="button button--outline" data-demo-action="" data-demo-message="Ringkasan kebutuhan pekerja sedang disiapkan." data-demo-title="Ringkasan diunduh" type="button"><span aria-hidden="true" class="material-symbols-rounded">download</span>Unduh Ringkasan</button><a class="button button--primary" href="../jobs/create/"><span aria-hidden="true" class="material-symbols-rounded">add</span>Buat Lowongan</a></div></section>
+<section aria-label="Statistik utama" class="stats-grid"><article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">work</span></span><span class="metric-card__trend"><span aria-hidden="true" class="material-symbols-rounded">trending_up</span>+1 minggu ini</span></div><strong class="metric-card__value">4</strong><span class="metric-card__label">Lowongan aktif</span></article><article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">person_add</span></span><span class="metric-card__trend"><span aria-hidden="true" class="material-symbols-rounded">trending_up</span>+12,5%</span></div><strong class="metric-card__value">28</strong><span class="metric-card__label">Pelamar baru untuk dilihat</span></article><article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">groups</span></span><span class="metric-card__trend"><span aria-hidden="true" class="material-symbols-rounded">check_circle</span>71% terpenuhi</span></div><strong class="metric-card__value">17/24</strong><span class="metric-card__label">Kebutuhan pekerja terpenuhi</span></article><article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon"><span aria-hidden="true" class="material-symbols-rounded">payments</span></span><span class="metric-card__trend is-down"><span aria-hidden="true" class="material-symbols-rounded">south_east</span>4,2% lebih hemat</span></div><strong class="metric-card__value">Rp 8,75 jt</strong><span class="metric-card__label">Estimasi total upah aktif</span></article></section>
+<section class="dashboard-grid"><article class="card chart-shell"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Perkembangan Lowongan</h3><p>Pelamar masuk dan pekerja yang dipilih dalam 7 hari terakhir.</p></div><div aria-label="Legenda grafik" class="chart-legend"><span><i></i> Pelamar</span><span><i></i> Dipilih</span></div></header><div class="card__body"><div aria-label="Grafik pelamar dan pekerja yang dipilih selama tujuh hari" class="bar-chart" role="img"><div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height:44%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height:18%"></span></div><span class="bar-chart__label">Sen</span></div><div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height:58%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height:25%"></span></div><span class="bar-chart__label">Sel</span></div><div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height:51%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height:32%"></span></div><span class="bar-chart__label">Rab</span></div><div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height:76%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height:36%"></span></div><span class="bar-chart__label">Kam</span></div><div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height:69%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height:41%"></span></div><span class="bar-chart__label">Jum</span></div><div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height:88%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height:54%"></span></div><span class="bar-chart__label">Sab</span></div><div class="bar-chart__item"><div class="bar-chart__bars"><span class="bar-chart__bar" style="height:62%"></span><span class="bar-chart__bar bar-chart__bar--secondary" style="height:46%"></span></div><span class="bar-chart__label">Min</span></div></div></div></article><aside class="card"><header class="card__header"><div class="card__header-copy"><h3 class="card-title">Perlu Tindakan</h3><p>Prioritas yang perlu diselesaikan.</p></div><span class="status status--pending">4 tugas</span></header><div class="card__body"><div class="action-list"><a class="action-item" href="../jobs/123/"><span aria-hidden="true" class="material-symbols-rounded action-item__icon">group</span><span class="action-item__copy"><strong>12 pelamar baru</strong><span>Angkut Material Bangunan</span></span><span aria-hidden="true" class="material-symbols-rounded">chevron_right</span></a><a class="action-item" href="../jobs/123/"><span aria-hidden="true" class="material-symbols-rounded action-item__icon">warning</span><span class="action-item__copy"><strong>Masih butuh 3 pekerja</strong><span>Mulai dalam 2 hari</span></span><span aria-hidden="true" class="material-symbols-rounded">chevron_right</span></a><a class="action-item" href="../jobs/123/#applicants"><span aria-hidden="true" class="material-symbols-rounded action-item__icon">person_check</span><span class="action-item__copy"><strong>2 pekerja menunggu kabar</strong><span>Segera beri kepastian</span></span><span aria-hidden="true" class="material-symbols-rounded">chevron_right</span></a><a class="action-item" href="../jobs/create/"><span aria-hidden="true" class="material-symbols-rounded action-item__icon">edit_calendar</span><span class="action-item__copy"><strong>1 lowongan perlu diperbarui</strong><span>Periksa kembali jadwal mulai</span></span><span aria-hidden="true" class="material-symbols-rounded">chevron_right</span></a></div></div></aside></section>
+<section aria-labelledby="jobs-table-title" class="card table-card"><header class="card__header"><div class="card__header-copy"><h3 class="card-title" id="jobs-table-title">Status Lowongan Aktif</h3><p>Ringkasan kebutuhan pekerja dan aktivitas pelamar.</p></div><a class="button button--outline button--small" href="../jobs/">Lihat Semua</a></header><div class="table-scroll"><table class="data-table"><thead><tr><th>Lowongan</th><th>Status</th><th>Pelamar</th><th>Kebutuhan pekerja</th><th>Mulai</th><th>Upah / pekerja</th><th>Aksi</th></tr></thead><tbody><tr data-dashboard-job-row="" data-dashboard-search-value="Angkut Material Bangunan Denpasar Barat · ID #MK-1048"><td class="job-cell"><strong>Angkut Material Bangunan</strong><span>Denpasar Barat · ID #MK-1048</span></td><td><span class="status status--active">Aktif</span></td><td><strong>12</strong> <span class="muted">baru</span></td><td class="quota-cell"><div class="quota-cell__top"><span>5 dari 8 pekerja</span><strong>62%</strong></div><div class="progress"><div class="progress__bar" style="width:62%"></div></div></td><td>22 Jul 2026</td><td>Rp 170.000</td><td><a class="table-link" href="../jobs/123/">Kelola<span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td></tr><tr data-dashboard-job-row="" data-dashboard-search-value="Bersih-Bersih Villa Harian Canggu · ID #MK-1044"><td class="job-cell"><strong>Bersih-Bersih Villa Harian</strong><span>Canggu · ID #MK-1044</span></td><td><span class="status status--active">Aktif</span></td><td><strong>8</strong> <span class="muted">baru</span></td><td class="quota-cell"><div class="quota-cell__top"><span>4 dari 4 pekerja</span><strong>100%</strong></div><div class="progress"><div class="progress__bar" style="width:100%"></div></div></td><td>24 Jul 2026</td><td>Rp 110.000</td><td><a class="table-link" href="../jobs/123/">Kelola<span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td></tr><tr data-dashboard-job-row="" data-dashboard-search-value="Instalasi Lampu Area Taman Ubud · ID #MK-1039"><td class="job-cell"><strong>Instalasi Lampu Area Taman</strong><span>Ubud · ID #MK-1039</span></td><td><span class="status status--pending">Ditinjau</span></td><td><strong>5</strong> <span class="muted">pelamar</span></td><td class="quota-cell"><div class="quota-cell__top"><span>2 dari 3 pekerja</span><strong>67%</strong></div><div class="progress"><div class="progress__bar" style="width:67%"></div></div></td><td>27 Jul 2026</td><td>Rp 210.000</td><td><a class="table-link" href="../jobs/123/">Kelola<span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td></tr><tr data-dashboard-job-row="" data-dashboard-search-value="Perawatan Taman Mingguan Sanur · ID #MK-1031"><td class="job-cell"><strong>Perawatan Taman Mingguan</strong><span>Sanur · ID #MK-1031</span></td><td><span class="status status--draft">Draft</span></td><td><span class="muted">Belum tayang</span></td><td class="quota-cell"><div class="quota-cell__top"><span>0 dari 2 pekerja</span><strong>0%</strong></div><div class="progress"><div class="progress__bar" style="width:0%"></div></div></td><td>Belum dijadwalkan</td><td>Rp 130.000</td><td><a class="table-link" href="../jobs/create/">Kelola<span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></td></tr><tr data-dashboard-empty="" hidden><td class="muted" colspan="7">Tidak ada lowongan yang cocok dengan pencarian.</td></tr></tbody></table></div></section>
 </main>
 </div>
 </div>
 <div aria-live="polite" class="toast-region" data-toast-region=""></div>
+</div>
 <script src="../../assets/dashboard.js"></script>
 </body>
 </html>

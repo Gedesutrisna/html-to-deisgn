@@ -10,88 +10,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet"/>
 <link href="../../../assets/dashboard.css" rel="stylesheet"/>
 </head>
-<body data-sidebar="normal">
+<body>
+<div class="mekard-dashboard" data-sidebar="normal">
 <div class="app-shell">
 <aside aria-label="Navigasi pemberi kerja" class="sidebar">
 <div class="sidebar__header">
-<a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="../../dashboard/"><img alt="" aria-hidden="true" class="brand__mark" height="197" src="../../../assets/mekard-mark.png" width="197"/><span class="brand__word">mekard.</span></a>
-<button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span>
-</button>
+<a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="../../"><span aria-hidden="true" class="brand__symbol">m</span><span class="brand__word">mekard.</span></a>
+<button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button"><span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span></button>
 </div>
 <div class="sidebar__content">
 <p class="sidebar__label">Workspace</p>
-<nav class="sidebar__nav">
-<a class="nav-item" data-tooltip="Dashboard" href="../../dashboard/">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">space_dashboard</span>
-<span class="nav-item__text">Dashboard</span>
-</a>
-<a class="nav-item is-active" data-tooltip="Buat Lowongan" href="./">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">add_circle</span>
-<span class="nav-item__text">Buat Lowongan</span>
-</a>
-<a class="nav-item" data-tooltip="Lowongan Saya" href="../123/">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">work</span>
-<span class="nav-item__text">Lowongan Saya</span>
-<span class="nav-item__badge">4</span>
-</a>
-<a class="nav-item" data-tooltip="Pelamar" href="../123/#applicants">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">group</span>
-<span class="nav-item__text">Pelamar</span>
-<span class="nav-item__badge">28</span>
-</a>
-<a class="nav-item" data-tooltip="Pekerja Terpilih" href="../123/#applicants">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">person_check</span>
-<span class="nav-item__text">Pekerja Terpilih</span>
-</a>
-
-</nav>
+<nav class="sidebar__nav"><a class="nav-item" data-tooltip="Dashboard" href="../../">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">space_dashboard</span><span class="nav-item__text">Dashboard</span>
+</a><a class="nav-item is-active" data-tooltip="Buat Lowongan" href="./">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">add_circle</span><span class="nav-item__text">Buat Lowongan</span>
+</a><a class="nav-item" data-tooltip="Lowongan Saya" href="../">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">work</span><span class="nav-item__text">Lowongan Saya</span><span class="nav-item__badge">4</span>
+</a><a class="nav-item" data-tooltip="Pelamar" href="../123/#applicants">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">group</span><span class="nav-item__text">Pelamar</span><span class="nav-item__badge">28</span>
+</a><a class="nav-item" data-tooltip="Pekerja Terpilih" href="../123/#work">
+<span aria-hidden="true" class="material-symbols-rounded nav-item__icon">person_check</span><span class="nav-item__text">Pekerja Terpilih</span>
+</a></nav>
 <div class="sidebar__divider"></div>
 <p class="sidebar__label">Pengaturan</p>
 <nav class="sidebar__nav">
-<a class="nav-item" data-tooltip="Profil Perusahaan" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">apartment</span>
-<span class="nav-item__text">Profil Perusahaan</span>
-</a>
-<a class="nav-item" data-tooltip="Notifikasi" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">notifications</span>
-<span class="nav-item__text">Notifikasi</span>
-</a>
-<a class="nav-item" data-tooltip="Bantuan" href="#">
-<span aria-hidden="true" class="nav-item__icon material-symbols-rounded">help</span>
-<span class="nav-item__text">Bantuan</span>
-</a>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Profil Perusahaan" data-tooltip="Profil Perusahaan" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">apartment</span><span class="nav-item__text">Profil Perusahaan</span></button>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Notifikasi" data-tooltip="Notifikasi" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">notifications</span><span class="nav-item__text">Notifikasi</span></button>
+<button class="nav-item" data-demo-action="" data-demo-message="Bagian ini siap dihubungkan ke data produksi." data-demo-title="Bantuan" data-tooltip="Bantuan" type="button"><span aria-hidden="true" class="material-symbols-rounded nav-item__icon">help</span><span class="nav-item__text">Bantuan</span></button>
 </nav>
 </div>
 <div class="sidebar__footer">
-<a class="sidebar-profile" href="#profil">
-<span class="avatar">NB</span>
-<span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">more_vert</span>
-</a>
+<button class="sidebar-profile" data-demo-action="" data-demo-message="Nusa Build adalah akun pemberi kerja terverifikasi." data-demo-title="Profil perusahaan" id="profile" type="button">
+<span class="avatar">NB</span><span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span><span aria-hidden="true" class="material-symbols-rounded">more_vert</span>
+</button>
 </div>
 </aside>
-<div aria-hidden="true" class="mobile-overlay" data-mobile-overlay=""></div>
+<button aria-label="Tutup navigasi" class="mobile-overlay" data-mobile-overlay="" type="button"></button>
 <div class="main-shell">
 <header class="topbar">
 <div class="topbar__left">
-<button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span>
-</button>
-<div class="page-heading">
-<span class="page-heading__eyebrow">Lowongan / Baru</span>
-<h1>Buat Lowongan Baru</h1>
-</div>
+<button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar (Alt+S)" type="button"><span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span></button>
+<div class="page-heading"><span class="page-heading__eyebrow">Lowongan / Baru</span><h1>Buat Lowongan Baru</h1></div>
 </div>
 <div class="topbar__right">
-<button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="Tidak ada validasi yang memerlukan tindakan." data-demo-title="Notifikasi" type="button">
-<span aria-hidden="true" class="material-symbols-rounded">notifications</span>
-</button>
-<button aria-label="Buka profil" class="header-profile" type="button">
-<span class="avatar">NB</span>
-<span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span>
-<span aria-hidden="true" class="material-symbols-rounded">expand_more</span>
-</button>
+<button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="Ada 6 pembaruan baru dari pelamar." data-demo-title="Notifikasi" type="button"><span aria-hidden="true" class="material-symbols-rounded">notifications</span></button>
+<button aria-label="Buka profil" class="header-profile" data-demo-action="" data-demo-message="Menu profil siap dihubungkan ke autentikasi produksi." data-demo-title="Profil" type="button"><span class="avatar">NB</span><span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span><span aria-hidden="true" class="material-symbols-rounded">expand_more</span></button>
 </div>
 </header>
 <main class="app-content" id="main-content">
@@ -102,7 +65,7 @@
 <p>Ceritakan pekerjaannya dengan jelas. Saran upah dihitung per pekerja berdasarkan durasi, beban fisik, kondisi kerja, alat, dan jadwal.</p>
 </div>
 <div class="content-header__actions">
-<a class="button button--outline" href="../../dashboard/">
+<a class="button button--outline" href="../../">
 <span aria-hidden="true" class="material-symbols-rounded">arrow_back</span>
                 Kembali
               </a>
@@ -213,7 +176,6 @@
 <div class="input-group"><span class="input-group__prefix">Rp</span><input class="input has-prefix" id="additional-wage" min="0" name="additional_wage" placeholder="0" step="5000" type="number"/></div>
 <div class="field__help">Tambahan ini berada di atas rekomendasi Mekard dan tidak dapat menguranginya.</div>
 </div>
-
 <fieldset class="indicator-fieldset field--full">
 <legend>Aktivitas fisik</legend>
 <p class="indicator-help">Pilih aktivitas yang paling dominan selama pekerjaan.</p>
@@ -223,7 +185,6 @@
 <label class="indicator-card"><input checked="" name="effort_level" type="radio" value="4"/><span><strong>Berat</strong><small>Mengangkat konstan, memanjat, merangkak, atau mencangkul.</small><em>4 poin</em></span></label>
 </div>
 </fieldset>
-
 <fieldset class="indicator-fieldset field--full">
 <legend>Berat objek yang ditangani</legend>
 <p class="indicator-help">Gunakan berat objek yang paling sering dipindahkan.</p>
@@ -233,7 +194,6 @@
 <label class="indicator-card"><input checked="" name="weight_load" type="radio" value="4"/><span><strong>Di atas 15 kg</strong><small>Karung, sofa, kulkas, atau material bangunan.</small><em>4 poin</em></span></label>
 </div>
 </fieldset>
-
 <fieldset class="indicator-fieldset field--full">
 <legend>Ketinggian atau kedalaman</legend>
 <div class="indicator-grid indicator-grid--3">
@@ -242,7 +202,6 @@
 <label class="indicator-card"><input name="vertical_hazard" type="radio" value="3"/><span><strong>Level ekstrem</strong><small>Atap, pohon, sumur, lubang, atau membutuhkan tali pengaman.</small><em>3 poin</em></span></label>
 </div>
 </fieldset>
-
 <fieldset class="indicator-fieldset field--full">
 <legend>Alat dan bahan kerja</legend>
 <div class="indicator-grid indicator-grid--3">
@@ -251,7 +210,6 @@
 <label class="indicator-card"><input name="material_hazard" type="radio" value="3"/><span><strong>Risiko ekstrem</strong><small>Listrik aktif, mesin potong cepat, api, las, atau bahan industri.</small><em>3 poin</em></span></label>
 </div>
 </fieldset>
-
 <fieldset class="indicator-fieldset field--full">
 <legend>Kondisi udara dan ruang</legend>
 <div class="indicator-grid indicator-grid--3">
@@ -260,7 +218,6 @@
 <label class="indicator-card"><input name="environment_space" type="radio" value="3"/><span><strong>Terbatas / pengap</strong><small>Sempit, berdebu, berasap, tanpa ventilasi, atau bersuhu ekstrem.</small><em>3 poin</em></span></label>
 </div>
 </fieldset>
-
 <div class="field field--full"><div class="system-note"><span aria-hidden="true" class="material-symbols-rounded">psychology</span><span>Pada produksi, indikator ini dikirim ke model Machine Learning. Kalkulasi di prototipe ini mensimulasikan hasil model agar alur antarmuka dapat diuji.</span></div></div>
 <input name="recommended_wage" type="hidden"/>
 <input name="final_wage_per_worker" type="hidden"/>
@@ -305,6 +262,7 @@
 </div>
 </div>
 <div aria-live="polite" class="toast-region" data-toast-region=""></div>
+</div>
 <script src="../../../assets/dashboard.js"></script>
 </body>
 </html>

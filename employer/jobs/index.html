@@ -1,137 +1,534 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <meta content="Daftar lowongan pemberi kerja dengan status, upah per pekerja, kebutuhan, pelamar, dan total anggaran." name="description"/>
-  <title>Lowongan Saya | Mekard Pemberi Kerja</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet"/>
-  <link href="../../assets/dashboard.css" rel="stylesheet"/>
-</head>
-<body data-sidebar="normal">
-<div class="app-shell">
-  <aside aria-label="Navigasi pemberi kerja" class="sidebar">
-    <div class="sidebar__header">
-      <a aria-label="Mekard, buka dashboard pemberi kerja" class="brand" href="../dashboard/">
-        <span aria-hidden="true" class="brand__symbol">m</span><span class="brand__word">mekard.</span>
-      </a>
-      <button aria-label="Perkecil sidebar" class="sidebar__quick-toggle" data-sidebar-close="" type="button"><span aria-hidden="true" class="material-symbols-rounded">left_panel_close</span></button>
-    </div>
-    <div class="sidebar__content">
-      <p class="sidebar__label">Workspace</p>
-      <nav class="sidebar__nav">
-        <a class="nav-item" data-tooltip="Dashboard" href="../dashboard/"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">space_dashboard</span><span class="nav-item__text">Dashboard</span></a>
-        <a class="nav-item" data-tooltip="Buat Lowongan" href="create/"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">add_circle</span><span class="nav-item__text">Buat Lowongan</span></a>
-        <a class="nav-item is-active" data-tooltip="Lowongan Saya" href="./"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">work</span><span class="nav-item__text">Lowongan Saya</span><span class="nav-item__badge">4</span></a>
-        <a class="nav-item" data-tooltip="Pelamar" href="123/#applicants"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">group</span><span class="nav-item__text">Pelamar</span><span class="nav-item__badge">28</span></a>
-        <a class="nav-item" data-tooltip="Pekerja Terpilih" href="123/#applicants"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">person_check</span><span class="nav-item__text">Pekerja Terpilih</span></a>
-      </nav>
-      <div class="sidebar__divider"></div>
-      <p class="sidebar__label">Pengaturan</p>
-      <nav class="sidebar__nav">
-        <a class="nav-item" data-tooltip="Profil Perusahaan" href="#"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">apartment</span><span class="nav-item__text">Profil Perusahaan</span></a>
-        <a class="nav-item" data-tooltip="Notifikasi" href="#"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">notifications</span><span class="nav-item__text">Notifikasi</span></a>
-        <a class="nav-item" data-tooltip="Bantuan" href="#"><span aria-hidden="true" class="nav-item__icon material-symbols-rounded">help</span><span class="nav-item__text">Bantuan</span></a>
-      </nav>
-    </div>
-    <div class="sidebar__footer"><a class="sidebar-profile" href="#profil"><span class="avatar">NB</span><span class="sidebar-profile__copy"><strong>Nusa Build</strong><span>Akun pemberi kerja</span></span><span aria-hidden="true" class="material-symbols-rounded">more_vert</span></a></div>
-  </aside>
-  <div aria-hidden="true" class="mobile-overlay" data-mobile-overlay=""></div>
-  <div class="main-shell">
-    <header class="topbar">
-      <div class="topbar__left">
-        <button aria-label="Ganti tampilan sidebar" class="icon-button sidebar-state-button" data-sidebar-cycle="" title="Ganti tampilan sidebar" type="button"><span aria-hidden="true" class="material-symbols-rounded">dock_to_left</span></button>
-        <div class="page-heading"><span class="page-heading__eyebrow">Workspace / Lowongan</span><h1>Lowongan Saya</h1></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Daftar lowongan pemberi kerja dengan filter status, kebutuhan pekerja, upah, dan anggaran."
+      name="description"
+    />
+    <title>Lowongan Saya | Mekard Pemberi Kerja</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0"
+      rel="stylesheet"
+    />
+    <link href="../../assets/dashboard.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="mekard-dashboard" data-sidebar="normal">
+      <div class="app-shell">
+        <aside aria-label="Navigasi pemberi kerja" class="sidebar">
+          <div class="sidebar__header">
+            <a
+              aria-label="Mekard, buka dashboard pemberi kerja"
+              class="brand"
+              href="../"
+              ><span aria-hidden="true" class="brand__symbol">m</span
+              ><span class="brand__word">mekard.</span></a
+            >
+            <button
+              aria-label="Perkecil sidebar"
+              class="sidebar__quick-toggle"
+              data-sidebar-close=""
+              type="button"
+            >
+              <span aria-hidden="true" class="material-symbols-rounded"
+                >left_panel_close</span
+              >
+            </button>
+          </div>
+          <div class="sidebar__content">
+            <p class="sidebar__label">Workspace</p>
+            <nav class="sidebar__nav">
+              <a class="nav-item" data-tooltip="Dashboard" href="../">
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >space_dashboard</span
+                ><span class="nav-item__text">Dashboard</span> </a
+              ><a class="nav-item" data-tooltip="Buat Lowongan" href="create/">
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >add_circle</span
+                ><span class="nav-item__text">Buat Lowongan</span> </a
+              ><a
+                class="nav-item is-active"
+                data-tooltip="Lowongan Saya"
+                href="./"
+              >
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >work</span
+                ><span class="nav-item__text">Lowongan Saya</span
+                ><span class="nav-item__badge">4</span> </a
+              ><a
+                class="nav-item"
+                data-tooltip="Pelamar"
+                href="123/#applicants"
+              >
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >group</span
+                ><span class="nav-item__text">Pelamar</span
+                ><span class="nav-item__badge">28</span> </a
+              ><a
+                class="nav-item"
+                data-tooltip="Pekerja Terpilih"
+                href="123/#work"
+              >
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >person_check</span
+                ><span class="nav-item__text">Pekerja Terpilih</span>
+              </a>
+            </nav>
+            <div class="sidebar__divider"></div>
+            <p class="sidebar__label">Pengaturan</p>
+            <nav class="sidebar__nav">
+              <button
+                class="nav-item"
+                data-demo-action=""
+                data-demo-message="Bagian ini siap dihubungkan ke data produksi."
+                data-demo-title="Profil Perusahaan"
+                data-tooltip="Profil Perusahaan"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >apartment</span
+                ><span class="nav-item__text">Profil Perusahaan</span>
+              </button>
+              <button
+                class="nav-item"
+                data-demo-action=""
+                data-demo-message="Bagian ini siap dihubungkan ke data produksi."
+                data-demo-title="Notifikasi"
+                data-tooltip="Notifikasi"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >notifications</span
+                ><span class="nav-item__text">Notifikasi</span>
+              </button>
+              <button
+                class="nav-item"
+                data-demo-action=""
+                data-demo-message="Bagian ini siap dihubungkan ke data produksi."
+                data-demo-title="Bantuan"
+                data-tooltip="Bantuan"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="material-symbols-rounded nav-item__icon"
+                  >help</span
+                ><span class="nav-item__text">Bantuan</span>
+              </button>
+            </nav>
+          </div>
+          <div class="sidebar__footer">
+            <button
+              class="sidebar-profile"
+              data-demo-action=""
+              data-demo-message="Nusa Build adalah akun pemberi kerja terverifikasi."
+              data-demo-title="Profil perusahaan"
+              id="profile"
+              type="button"
+            >
+              <span class="avatar">NB</span
+              ><span class="sidebar-profile__copy"
+                ><strong>Nusa Build</strong
+                ><span>Akun pemberi kerja</span></span
+              ><span aria-hidden="true" class="material-symbols-rounded"
+                >more_vert</span
+              >
+            </button>
+          </div>
+        </aside>
+        <button
+          aria-label="Tutup navigasi"
+          class="mobile-overlay"
+          data-mobile-overlay=""
+          type="button"
+        ></button>
+        <div class="main-shell">
+          <header class="topbar">
+            <div class="topbar__left">
+              <button
+                aria-label="Ganti tampilan sidebar"
+                class="icon-button sidebar-state-button"
+                data-sidebar-cycle=""
+                title="Ganti tampilan sidebar (Alt+S)"
+                type="button"
+              >
+                <span aria-hidden="true" class="material-symbols-rounded"
+                  >dock_to_left</span
+                >
+              </button>
+              <div class="page-heading">
+                <span class="page-heading__eyebrow">Workspace / Lowongan</span>
+                <h1>Lowongan Saya</h1>
+              </div>
+            </div>
+            <div class="topbar__right">
+              <button
+                aria-label="Notifikasi"
+                class="icon-button notification-dot"
+                data-demo-action=""
+                data-demo-message="Ada 6 pembaruan baru dari pelamar."
+                data-demo-title="Notifikasi"
+                type="button"
+              >
+                <span aria-hidden="true" class="material-symbols-rounded"
+                  >notifications</span
+                >
+              </button>
+              <button
+                aria-label="Buka profil"
+                class="header-profile"
+                data-demo-action=""
+                data-demo-message="Menu profil siap dihubungkan ke autentikasi produksi."
+                data-demo-title="Profil"
+                type="button"
+              >
+                <span class="avatar">NB</span
+                ><span class="header-profile__copy"
+                  ><strong>Nusa Build</strong
+                  ><span>Pemberi kerja terverifikasi</span></span
+                ><span aria-hidden="true" class="material-symbols-rounded"
+                  >expand_more</span
+                >
+              </button>
+            </div>
+          </header>
+          <main class="app-content" id="main-content">
+            <section class="content-header">
+              <div class="content-header__copy">
+                <p class="kicker">Kelola kebutuhan pekerja</p>
+                <h2>Semua lowongan dalam satu tempat.</h2>
+                <p>
+                  Pantau status publikasi, kebutuhan pekerja, upah per pekerja,
+                  pelamar, dan total anggaran tanpa kalkulasi jarak.
+                </p>
+              </div>
+              <div class="content-header__actions">
+                <a class="button button--primary" href="create/"
+                  ><span aria-hidden="true" class="material-symbols-rounded"
+                    >add</span
+                  >Buat Lowongan</a
+                >
+              </div>
+            </section>
+            <section
+              aria-label="Ringkasan lowongan"
+              class="stats-grid job-list-stats"
+            >
+              <article class="card metric-card">
+                <div class="metric-card__top">
+                  <span class="metric-card__icon"
+                    ><span aria-hidden="true" class="material-symbols-rounded"
+                      >work</span
+                    ></span
+                  ><span class="metric-card__trend">Semua</span>
+                </div>
+                <strong class="metric-card__value">4</strong
+                ><span class="metric-card__label">Total lowongan</span>
+              </article>
+              <article class="card metric-card">
+                <div class="metric-card__top">
+                  <span class="metric-card__icon"
+                    ><span aria-hidden="true" class="material-symbols-rounded"
+                      >campaign</span
+                    ></span
+                  ><span class="metric-card__trend">Dibuka</span>
+                </div>
+                <strong class="metric-card__value">2</strong
+                ><span class="metric-card__label">Lowongan aktif</span>
+              </article>
+              <article class="card metric-card">
+                <div class="metric-card__top">
+                  <span class="metric-card__icon"
+                    ><span aria-hidden="true" class="material-symbols-rounded"
+                      >group</span
+                    ></span
+                  ><span class="metric-card__trend">Total</span>
+                </div>
+                <strong class="metric-card__value">44</strong
+                ><span class="metric-card__label">Total pelamar</span>
+              </article>
+              <article class="card metric-card">
+                <div class="metric-card__top">
+                  <span class="metric-card__icon"
+                    ><span aria-hidden="true" class="material-symbols-rounded"
+                      >payments</span
+                    ></span
+                  ><span class="metric-card__trend">Rencana</span>
+                </div>
+                <strong class="metric-card__value">Rp 1,78 jt</strong
+                ><span class="metric-card__label">Total anggaran aktif</span>
+              </article>
+            </section>
+            <section class="card table-card job-list-card">
+              <header class="card__header job-list-header">
+                <div class="card__header-copy">
+                  <h3 class="card-title">Daftar Lowongan</h3>
+                  <p>
+                    Nominal upah pada tabel adalah upah final untuk satu
+                    pekerja.
+                  </p>
+                </div>
+                <div class="inline-actions">
+                  <span class="muted job-result" data-job-result=""
+                    >4 lowongan ditampilkan</span
+                  >
+                </div>
+              </header>
+              <div class="job-list-toolbar">
+                <label class="filter-input"
+                  ><span aria-hidden="true" class="material-symbols-rounded"
+                    >search</span
+                  ><span class="sr-only">Cari lowongan</span
+                  ><input
+                    class="input"
+                    data-job-search=""
+                    placeholder="Cari judul, kategori, kode, atau lokasi..."
+                    type="search" /></label
+                ><label
+                  ><span class="sr-only">Filter status</span
+                  ><select class="select" data-job-status="">
+                    <option value="all">Semua status</option>
+                    <option value="active">Aktif</option>
+                    <option value="draft">Draft</option>
+                    <option value="paused">Dijeda</option>
+                    <option value="completed">Selesai</option>
+                  </select></label
+                ><button
+                  class="button button--outline"
+                  data-job-reset=""
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+              <div class="table-scroll">
+                <table class="data-table job-list-table">
+                  <thead>
+                    <tr>
+                      <th>Lowongan</th>
+                      <th>Status</th>
+                      <th>Jadwal</th>
+                      <th>Upah / pekerja</th>
+                      <th>Kebutuhan</th>
+                      <th>Pelamar</th>
+                      <th>Total anggaran</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      data-job-row=""
+                      data-job-search-value="Angkut Material Bangunan Angkut &amp; Pindahan MK-123 Denpasar Barat"
+                      data-job-status-value="active"
+                    >
+                      <td class="job-cell">
+                        <strong>Angkut Material Bangunan</strong
+                        ><span
+                          >MK-123 · Angkut &amp; Pindahan · Denpasar Barat</span
+                        >
+                      </td>
+                      <td><span class="status status--active">Aktif</span></td>
+                      <td>
+                        <strong>22 Jul 2026</strong
+                        ><span class="table-meta">08:00 · 5 jam</span>
+                      </td>
+                      <td class="wage-cell">
+                        <strong>Rp 170.000</strong><span>per pekerja</span>
+                      </td>
+                      <td class="quota-cell">
+                        <div class="quota-cell__top">
+                          <span>5 dari 8</span><strong>62%</strong>
+                        </div>
+                        <div class="progress">
+                          <div class="progress__bar" style="width: 62%"></div>
+                        </div>
+                      </td>
+                      <td>
+                        <strong>12</strong
+                        ><span class="table-meta">pelamar baru</span>
+                      </td>
+                      <td class="budget-cell">
+                        <strong>Rp 1.360.000</strong><span>8 × Rp 170.000</span>
+                      </td>
+                      <td>
+                        <div class="job-table-actions">
+                          <a class="table-link" href="123/"
+                            >Kelola<span
+                              aria-hidden="true"
+                              class="material-symbols-rounded"
+                              >arrow_forward</span
+                            ></a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      data-job-row=""
+                      data-job-search-value="Bersih Rumah Vila Kebersihan MK-124 Ubud"
+                      data-job-status-value="active"
+                    >
+                      <td class="job-cell">
+                        <strong>Bersih Rumah Vila</strong
+                        ><span>MK-124 · Kebersihan · Ubud</span>
+                      </td>
+                      <td><span class="status status--active">Aktif</span></td>
+                      <td>
+                        <strong>24 Jul 2026</strong
+                        ><span class="table-meta">09:00 · 6 jam</span>
+                      </td>
+                      <td class="wage-cell">
+                        <strong>Rp 140.000</strong><span>per pekerja</span>
+                      </td>
+                      <td class="quota-cell">
+                        <div class="quota-cell__top">
+                          <span>2 dari 3</span><strong>67%</strong>
+                        </div>
+                        <div class="progress">
+                          <div class="progress__bar" style="width: 67%"></div>
+                        </div>
+                      </td>
+                      <td>
+                        <strong>8</strong
+                        ><span class="table-meta">pelamar</span>
+                      </td>
+                      <td class="budget-cell">
+                        <strong>Rp 420.000</strong><span>3 × Rp 140.000</span>
+                      </td>
+                      <td>
+                        <div class="job-table-actions">
+                          <a class="table-link" href="123/"
+                            >Kelola<span
+                              aria-hidden="true"
+                              class="material-symbols-rounded"
+                              >arrow_forward</span
+                            ></a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      data-job-row=""
+                      data-job-search-value="Perbaikan Pipa Air Perbaikan Rumah MK-125 Sanur"
+                      data-job-status-value="draft"
+                    >
+                      <td class="job-cell">
+                        <strong>Perbaikan Pipa Air</strong
+                        ><span>MK-125 · Perbaikan Rumah · Sanur</span>
+                      </td>
+                      <td><span class="status status--draft">Draft</span></td>
+                      <td>
+                        <strong>26 Jul 2026</strong
+                        ><span class="table-meta">10:00 · 4 jam</span>
+                      </td>
+                      <td class="wage-cell">
+                        <strong>Rp 180.000</strong><span>per pekerja</span>
+                      </td>
+                      <td class="quota-cell">
+                        <div class="quota-cell__top">
+                          <span>0 dari 1</span><strong>0%</strong>
+                        </div>
+                        <div class="progress">
+                          <div class="progress__bar" style="width: 0%"></div>
+                        </div>
+                      </td>
+                      <td>
+                        <strong>—</strong
+                        ><span class="table-meta">belum dipublikasi</span>
+                      </td>
+                      <td class="budget-cell">
+                        <strong>Rp 180.000</strong><span>1 × Rp 180.000</span>
+                      </td>
+                      <td>
+                        <div class="job-table-actions">
+                          <a class="table-link" href="create/"
+                            >Lanjutkan<span
+                              aria-hidden="true"
+                              class="material-symbols-rounded"
+                              >edit</span
+                            ></a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                    <tr
+                      data-job-row=""
+                      data-job-search-value="Bongkar Muat Gudang Angkut &amp; Pindahan MK-126 Denpasar"
+                      data-job-status-value="completed"
+                    >
+                      <td class="job-cell">
+                        <strong>Bongkar Muat Gudang</strong
+                        ><span>MK-126 · Angkut &amp; Pindahan · Denpasar</span>
+                      </td>
+                      <td>
+                        <span class="status status--closed">Selesai</span>
+                      </td>
+                      <td>
+                        <strong>15 Jul 2026</strong
+                        ><span class="table-meta">07:00 · 5 jam</span>
+                      </td>
+                      <td class="wage-cell">
+                        <strong>Rp 160.000</strong><span>per pekerja</span>
+                      </td>
+                      <td class="quota-cell">
+                        <div class="quota-cell__top">
+                          <span>6 dari 6</span><strong>100%</strong>
+                        </div>
+                        <div class="progress">
+                          <div class="progress__bar" style="width: 100%"></div>
+                        </div>
+                      </td>
+                      <td>
+                        <strong>24</strong
+                        ><span class="table-meta">pelamar</span>
+                      </td>
+                      <td class="budget-cell">
+                        <strong>Rp 960.000</strong><span>6 × Rp 160.000</span>
+                      </td>
+                      <td>
+                        <div class="job-table-actions">
+                          <a class="table-link" href="123/"
+                            >Lihat catatan<span
+                              aria-hidden="true"
+                              class="material-symbols-rounded"
+                              >description</span
+                            ></a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="job-list-empty" data-job-empty="" hidden>
+                <span aria-hidden="true" class="material-symbols-rounded"
+                  >search_off</span
+                ><strong>Lowongan tidak ditemukan</strong
+                ><span>Coba ubah kata pencarian atau filter status.</span>
+              </div>
+            </section>
+          </main>
+        </div>
       </div>
-      <div class="topbar__right">
-        <button aria-label="Notifikasi" class="icon-button notification-dot" data-demo-action="" data-demo-message="12 pelamar baru menunggu ditinjau." data-demo-title="Notifikasi" type="button"><span aria-hidden="true" class="material-symbols-rounded">notifications</span></button>
-        <button aria-label="Buka profil" class="header-profile" type="button"><span class="avatar">NB</span><span class="header-profile__copy"><strong>Nusa Build</strong><span>Pemberi kerja terverifikasi</span></span><span aria-hidden="true" class="material-symbols-rounded">expand_more</span></button>
-      </div>
-    </header>
-    <main class="app-content" id="main-content">
-      <section class="content-header">
-        <div class="content-header__copy">
-          <p class="kicker">Kelola kebutuhan pekerja</p>
-          <h2>Semua lowongan dalam satu tempat.</h2>
-          <p>Pantau status publikasi, kebutuhan pekerja, upah per pekerja, pelamar, dan total anggaran tanpa kalkulasi jarak.</p>
-        </div>
-        <div class="content-header__actions">
-          <a class="button button--primary" href="create/"><span aria-hidden="true" class="material-symbols-rounded">add</span> Buat Lowongan</a>
-        </div>
-      </section>
-
-      <section aria-label="Ringkasan lowongan" class="stats-grid job-list-stats">
-        <article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon material-symbols-rounded">work</span><span class="metric-card__trend">Semua</span></div><strong class="metric-card__value">4</strong><span class="metric-card__label">Total lowongan</span></article>
-        <article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon material-symbols-rounded">campaign</span><span class="metric-card__trend">Dibuka</span></div><strong class="metric-card__value">2</strong><span class="metric-card__label">Lowongan aktif</span></article>
-        <article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon material-symbols-rounded">group</span><span class="metric-card__trend">Baru</span></div><strong class="metric-card__value">28</strong><span class="metric-card__label">Total pelamar</span></article>
-        <article class="card metric-card"><div class="metric-card__top"><span class="metric-card__icon material-symbols-rounded">payments</span><span class="metric-card__trend">Rencana</span></div><strong class="metric-card__value">Rp 2,92 jt</strong><span class="metric-card__label">Total anggaran aktif</span></article>
-      </section>
-
-      <section class="card table-card job-list-card">
-        <header class="card__header job-list-header">
-          <div class="card__header-copy"><h3 class="card-title">Daftar Lowongan</h3><p>Nominal upah pada tabel adalah upah final untuk satu pekerja.</p></div>
-          <div class="inline-actions"><span class="muted" data-job-result>4 lowongan ditampilkan</span></div>
-        </header>
-        <div class="job-list-toolbar">
-          <label class="filter-input"><span aria-hidden="true" class="material-symbols-rounded">search</span><span class="sr-only">Cari lowongan</span><input class="input" data-job-search placeholder="Cari judul, kategori, atau kode..." type="search"/></label>
-          <label><span class="sr-only">Filter status</span><select class="select" data-job-status><option value="all">Semua status</option><option value="active">Aktif</option><option value="draft">Draft</option><option value="paused">Dijeda</option><option value="completed">Selesai</option></select></label>
-          <button class="button button--outline" data-job-reset type="button">Reset</button>
-        </div>
-        <div class="table-scroll">
-          <table class="data-table job-list-table">
-            <thead><tr><th>Lowongan</th><th>Status</th><th>Jadwal</th><th>Upah / pekerja</th><th>Kebutuhan</th><th>Pelamar</th><th>Total anggaran</th><th>Aksi</th></tr></thead>
-            <tbody>
-              <tr data-job-row data-job-status-value="active" data-job-search-value="angkut material bangunan angkut pindahan mk-1048 denpasar">
-                <td class="job-cell"><strong>Angkut Material Bangunan</strong><span>MK-1048 · Angkut &amp; Pindahan</span></td>
-                <td><span class="status status--active">Aktif</span></td>
-                <td><strong>22 Jul 2026</strong><span class="table-meta">08:00 · 5 jam</span></td>
-                <td class="wage-cell"><strong>Rp 170.000</strong><span>per pekerja</span></td>
-                <td class="quota-cell"><div class="quota-cell__top"><span>5 dari 8</span><strong>63%</strong></div><div class="progress"><div class="progress__bar" style="width:62.5%"></div></div></td>
-                <td><strong>12</strong><span class="table-meta">pelamar baru</span></td>
-                <td class="budget-cell"><strong>Rp 1.360.000</strong><span>8 × Rp 170.000</span></td>
-                <td><div class="job-table-actions"><a class="table-link" href="123/">Kelola <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></div></td>
-              </tr>
-              <tr data-job-row data-job-status-value="active" data-job-search-value="bersih rumah vila kebersihan mk-1049 ubud">
-                <td class="job-cell"><strong>Bersih Rumah Vila</strong><span>MK-1049 · Kebersihan</span></td>
-                <td><span class="status status--active">Aktif</span></td>
-                <td><strong>24 Jul 2026</strong><span class="table-meta">09:00 · 6 jam</span></td>
-                <td class="wage-cell"><strong>Rp 140.000</strong><span>per pekerja</span></td>
-                <td class="quota-cell"><div class="quota-cell__top"><span>2 dari 3</span><strong>67%</strong></div><div class="progress"><div class="progress__bar" style="width:66.7%"></div></div></td>
-                <td><strong>8</strong><span class="table-meta">pelamar</span></td>
-                <td class="budget-cell"><strong>Rp 420.000</strong><span>3 × Rp 140.000</span></td>
-                <td><div class="job-table-actions"><a class="table-link" href="123/">Kelola <span aria-hidden="true" class="material-symbols-rounded">arrow_forward</span></a></div></td>
-              </tr>
-              <tr data-job-row data-job-status-value="draft" data-job-search-value="perbaikan pipa air perbaikan rumah mk-1050 sanur">
-                <td class="job-cell"><strong>Perbaikan Pipa Air</strong><span>MK-1050 · Perbaikan Rumah</span></td>
-                <td><span class="status status--draft">Draft</span></td>
-                <td><strong>26 Jul 2026</strong><span class="table-meta">10:00 · 4 jam</span></td>
-                <td class="wage-cell"><strong>Rp 180.000</strong><span>per pekerja</span></td>
-                <td class="quota-cell"><div class="quota-cell__top"><span>0 dari 1</span><strong>0%</strong></div><div class="progress"><div class="progress__bar" style="width:0%"></div></div></td>
-                <td><strong>—</strong><span class="table-meta">belum dipublikasi</span></td>
-                <td class="budget-cell"><strong>Rp 180.000</strong><span>1 × Rp 180.000</span></td>
-                <td><div class="job-table-actions"><a class="table-link" href="create/">Lanjutkan <span aria-hidden="true" class="material-symbols-rounded">edit</span></a></div></td>
-              </tr>
-              <tr data-job-row data-job-status-value="completed" data-job-search-value="bongkar muat gudang angkut pindahan mk-1043 denpasar">
-                <td class="job-cell"><strong>Bongkar Muat Gudang</strong><span>MK-1043 · Angkut &amp; Pindahan</span></td>
-                <td><span class="status status--closed">Selesai</span></td>
-                <td><strong>15 Jul 2026</strong><span class="table-meta">07:00 · 5 jam</span></td>
-                <td class="wage-cell"><strong>Rp 160.000</strong><span>per pekerja</span></td>
-                <td class="quota-cell"><div class="quota-cell__top"><span>6 dari 6</span><strong>100%</strong></div><div class="progress"><div class="progress__bar" style="width:100%"></div></div></td>
-                <td><strong>24</strong><span class="table-meta">pelamar</span></td>
-                <td class="budget-cell"><strong>Rp 960.000</strong><span>6 × Rp 160.000</span></td>
-                <td><div class="job-table-actions"><a class="table-link" href="123/">Lihat catatan <span aria-hidden="true" class="material-symbols-rounded">description</span></a></div></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="job-list-empty" data-job-empty hidden><span aria-hidden="true" class="material-symbols-rounded">search_off</span><strong>Lowongan tidak ditemukan</strong><span>Coba ubah kata pencarian atau filter status.</span></div>
-      </section>
-    </main>
-  </div>
-</div>
-<div aria-live="polite" class="toast-region" data-toast-region></div>
-<script src="../../assets/dashboard.js"></script>
-</body>
+      <div aria-live="polite" class="toast-region" data-toast-region=""></div>
+    </div>
+    <script src="../../assets/dashboard.js"></script>
+  </body>
 </html>
